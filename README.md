@@ -24,3 +24,8 @@ Add MonComptePro settings:
     SOCIAL_AUTH_MONCOMPTEPRO_OIDC_ENDPOINT = "https://app.moncomptepro.beta.gouv.fr"
     SOCIAL_AUTH_MONCOMPTEPRO_KEY = "xxxxx"
     SOCIAL_AUTH_MONCOMPTEPRO_SECRET = "xxxx"
+
+    AUTHENTICATION_BACKENDS = (
+        'umap_dsfr.moncomptepro.MonComptePro',
+        'django.contrib.auth.backends.ModelBackend',
+    )
