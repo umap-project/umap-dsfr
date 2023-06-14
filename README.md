@@ -11,9 +11,9 @@ In your local settings, add the `umap_dsfr` app:
 
     from umap.settings.base import *
 
-    INSTALLED_APPS += (
+    INSTALLED_APPS = (
         "umap_anct",
-    )
+    ) + INSTALLED_APPS
 
 
 Add MonComptePro settings:
