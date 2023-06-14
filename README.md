@@ -12,7 +12,7 @@ In your local settings, add the `umap_dsfr` app:
     from umap.settings.base import *
 
     INSTALLED_APPS = (
-        "umap_anct",
+        "umap_dsfr",
     ) + INSTALLED_APPS
 
 
