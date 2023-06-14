@@ -1,0 +1,82 @@
+{% load i18n %}
+
+<header role="banner" class="fr-header">
+  <div class="fr-header__body">
+    <div class="fr-container">
+      <div class="fr-header__body-row">
+        <div class="fr-header__brand fr-enlarge-link">
+          <div class="fr-header__brand-top">
+            <div class="fr-header__logo">
+              <a href="/" title="Accueil — uMap">
+                <p class="fr-logo">république<br />française</p>
+              </a>
+            </div>
+            <div class="fr-header__navbar">
+              <button class="fr-btn--menu fr-btn" data-fr-opened="false" aria-controls="fr-menu-mobile" aria-haspopup="menu" title="Menu" id="fr-btn-menu-mobile">
+                Menu
+              </button>
+            </div>
+          </div>
+          <div class="fr-header__service">
+            <a href="/" title="Accueil — uMap">
+              <p class="fr-header__service-title">uMap</p>
+            </a>
+            <p class="fr-header__service-tagline">Créez des cartes</p>
+          </div>
+        </div>
+        <div class="fr-header__tools">
+          <div class="fr-header__tools-links">
+            <ul class="fr-btns-group">
+              {% if user.is_authenticated %}
+                <li>
+                  <a href="{% url 'user_maps' user.username %}">{% trans "My maps" %} ({{ user }})</a>
+                </li>
+                <li>
+                  <a href="{% url 'user_stars' user.username %}">{% trans "Starred maps" %}</a>
+                </li>
+              {% else %}
+                <li>
+                  <a class="fr-btn fr-icon-lock-line" href="{% url 'social:begin' 'moncomptepro' %}">
+                    Se connecter
+                  </a>
+                </li>
+              {% endif %}
+              {% if user.is_authenticated %}
+                <li><a href="{% url 'logout' %}" class="logout">{% trans "Log out" %}</a></li>
+              {% endif %}
+              <li>
+                <a class="fr-btn fr-icon-add-circle-line" href="{% url 'map_new' %}">
+                  Créer une carte
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% block main_menu %}
+    <div class="fr-header__menu fr-modal" id="fr-menu-mobile" aria-labelledby="fr-btn-menu-mobile">
+      <div class="fr-container">
+        <button class="fr-btn--close fr-btn" aria-controls="fr-menu-mobile">Fermer</button>
+        <div class="fr-header__menu-links"></div>
+        <nav role="navigation" class="fr-nav" id="fr-navigation" aria-label="Menu principal">
+          <ul class="fr-nav__list">
+            <li class="fr-nav__item">
+              <a class="fr-nav__link" href="#" target="_self">Créez</a>
+            </li>
+            <li class="fr-nav__item">
+              <a class="fr-nav__link" href="#" target="_self">Découvrez</a>
+            </li>
+            <li class="fr-nav__item">
+              <a class="fr-nav__link" href="#" target="_self">Exemples</a>
+            </li>
+            <li class="fr-nav__item">
+              <a class="fr-nav__link" href="#" target="_self">Naviguez</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  {% endblock main_menu %}
+</header>

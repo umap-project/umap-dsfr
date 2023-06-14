@@ -15,3 +15,15 @@
     height: 56px;
     background-size: initial;
 }
+
+.fr-header__service {
+    background-image: url("/static/umap/img/logo.svg");
+    background-position: left center;
+    background-repeat: no-repeat;
+    background-size: 50px auto;
+    padding-left: 60px;
+}
+
+#intro {
+    background-color: var(--green-menthe-975-75);
+}

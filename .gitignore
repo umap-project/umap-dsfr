@@ -1,2 +1,4 @@
 *.egg-info
 __pycache__
+umap_dsfr/static/umap/vendors
+node_modules

@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% load umap_tags compress i18n %}
+
+{% block extra_head %}
+    <link rel="stylesheet" href="{{ STATIC_URL }}umap/vendors/dsfr/dsfr.min.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}umap/vendors/dsfr/utility/icons/icons.min.css" />
+    <link rel="stylesheet" href="{{ STATIC_URL }}umap/theme.css" />
+{% endblock %}
+
+{% block header %}
+  {% include 'umap/navigation.html' %}
+{% endblock %}
+
+{% block content %}
+  <main role="main" class="fr-container-fluid">
+    <div id="intro" class="fr-pb-4w">
+            <div class="fr-container">
+                <div class="fr-grid-row fr-grid-row--center">
+                    <div class="fr-col-xs-12 fr-col-md-8 fr-mb-5w fr-pt-4w at-centered">
+                        <h1>Créez facilement des cartes personnalisées basées sur
+OpenStreetMap</h1>
+                        <p>
+                            <button name="action" value="search-filter" class="fr-btn" title="Rechercher" type="submit">
+                              <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
+                            </button>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+  </main>
+{% endblock content %}
+
+{% block footer %}
+  {% include "umap/content_footer.html" %}
+{% endblock footer %}

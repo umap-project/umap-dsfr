@@ -1,0 +1,30 @@
+{
+  "name": "umap-dsfr",
+  "version": "0.0.1",
+  "description": "",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "vendors": "scripts/vendorsjs.sh"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/umap-project/umap-dsfr"
+  },
+  "keywords": [
+    "dsfr"
+  ],
+  "author": "Yohan Boniface",
+  "license": "WTFPL",
+  "bugs": {
+    "url": "https://github.com/umap-project/umap-dsfr/issues"
+  },
+  "homepage": "http://wiki.openstreetmap.org/wiki/UMap",
+  "dependencies": {
+    "@gouvfr/dsfr": "1.9.3"
+  },
+  "devDependencies": {
+    "uncss": "0.17.3"
+  }
+}
