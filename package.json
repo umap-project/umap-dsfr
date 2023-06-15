@@ -5,9 +5,6 @@
   "directories": {
     "test": "test"
   },
-  "scripts": {
-    "vendors": "scripts/vendorsjs.sh"
-  },
   "repository": {
     "type": "git",
     "url": "git://github.com/umap-project/umap-dsfr"
@@ -22,9 +19,7 @@
   },
   "homepage": "http://wiki.openstreetmap.org/wiki/UMap",
   "dependencies": {
-    "@gouvfr/dsfr": "1.9.3"
-  },
-  "devDependencies": {
-    "uncss": "0.17.3"
+    "@gouvfr/dsfr": "1.9.3",
+    "purgecss": "5.0.0"
   }
 }

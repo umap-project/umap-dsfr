@@ -3,7 +3,7 @@
 ## Installation
 
     pip install git+https://github.com/umap-project/umap-dsfr
-    make vendors
+    make dsfr-lite
 
 
 ## Configuration
