@@ -1,41 +1,47 @@
 {% extends "base.html" %}
-
 {% load umap_tags compress i18n %}
-
 {% block extra_head %}
-  <link rel="apple-touch-icon" href="{{ STATIC_URL }}umap/dsfr-lite/favicon/apple-touch-icon.png" /><!-- 180×180 -->
-  <link rel="icon" href="{{ STATIC_URL }}umap/dsfr-lite/favicon/favicon.svg" type="image/svg+xml" />
-  <link rel="shortcut icon" href="{{ STATIC_URL }}umap/dsfr-lite/favicon/favicon.ico" type="image/x-icon" /><!-- 32×32 -->
-  <link rel="manifest" href="{{ STATIC_URL }}umap/dsfr-lite/favicon/manifest.webmanifest" />
+  <link rel="apple-touch-icon"
+        href="{{ STATIC_URL }}umap/dsfr-lite/favicon/apple-touch-icon.png" />
+  <!-- 180×180 -->
+  <link rel="icon"
+        href="{{ STATIC_URL }}umap/dsfr-lite/favicon/favicon.svg"
+        type="image/svg+xml" />
+  <link rel="shortcut icon"
+        href="{{ STATIC_URL }}umap/dsfr-lite/favicon/favicon.ico"
+        type="image/x-icon" />
+  <!-- 32×32 -->
+  <link rel="manifest"
+        href="{{ STATIC_URL }}umap/dsfr-lite/favicon/manifest.webmanifest" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/dsfr.min.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/icons.min.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/theme.css" />
-{% endblock %}
-
+{% endblock extra_head %}
 {% block header %}
-  {% include 'umap/navigation.html' %}
-{% endblock %}
-
+  {% include "umap/navigation.html" %}
+{% endblock header %}
 {% block content %}
   <main role="main" class="fr-container-fluid">
     <div id="intro" class="fr-pb-4w">
-            <div class="fr-container">
-                <div class="fr-grid-row fr-grid-row--center">
-                    <div class="fr-col-xs-12 fr-col-md-8 fr-mb-5w fr-pt-4w at-centered">
-                        <h1>Créez facilement des cartes personnalisées basées sur
-OpenStreetMap</h1>
-                        <p>
-                            <button name="action" value="search-filter" class="fr-btn" title="Rechercher" type="submit">
-                              <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
-                            </button>
-                        </p>
-                    </div>
-                </div>
-            </div>
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+          <div class="fr-col-xs-12 fr-col-md-8 fr-mb-5w fr-pt-4w at-centered">
+            <h1>Une solution simple et alternative à GoogleMaps pour créer et partager des cartes</h1>
+            <p>
+              <button name="action"
+                      value="search-filter"
+                      class="fr-btn"
+                      title="Rechercher"
+                      type="submit">
+                <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
+              </button>
+            </p>
+          </div>
         </div>
+      </div>
+    </div>
   </main>
 {% endblock content %}
-
 {% block footer %}
   {% include "umap/content_footer.html" %}
 {% endblock footer %}

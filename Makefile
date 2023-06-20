@@ -1,5 +1,21 @@
 .DEFAULT_GOAL := help
 
+.PHONY: install
+install: ## Install the dependencies
+	python3 -m pip install --upgrade pip
+	python3 -m pip install -e .
+
+.PHONY: develop
+develop: ## Install the test and dev dependencies
+	python3 -m pip install -e .[dev]
+
+.PHONY: pretty-templates
+pretty-templates: ## Prettify template files
+	djlint umap_dsfr/templates --reformat
+
+.PHONY: lint-templates
+lint-templates: ## Lint template files
+	djlint umap_dsfr/templates --lint
 
 .PHONY: dsfr-lite
 dsfr-lite: ## Copy DSFR pertinent files and purge the huge CSS
