@@ -27,3 +27,9 @@
 #intro {
     background-color: rgb(233, 250, 252);
 }
+#exemples {
+    background-color: rgb(67, 79, 103);
+}
+#exemples h2 {
+    color: var(--grey-975-75);
+}
