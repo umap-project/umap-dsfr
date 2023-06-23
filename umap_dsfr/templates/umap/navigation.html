@@ -35,10 +35,10 @@
             <ul class="fr-btns-group">
               {% if user.is_authenticated %}
                 <li>
-                  <a href="{% url "user_maps" user.username %}">{% trans "My maps" %} ({{ user }})</a>
+                  <a href="{{ user.get_url }}">{% trans "My maps" %} ({{ user }})</a>
                 </li>
                 <li>
-                  <a href="{% url "user_stars" user.username %}">{% trans "Starred maps" %}</a>
+                  <a href="{{ user.get_stars_url }}">{% trans "Starred maps" %}</a>
                 </li>
               {% else %}
                 <li>
