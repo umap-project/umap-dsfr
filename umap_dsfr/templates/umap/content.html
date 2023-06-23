@@ -46,9 +46,10 @@
     </div>
     <div>
       <div class="fr-container">
-        <div id="statistiques" class="fr-grid-row fr-grid-row--gutters fr-mt-4w fr-mb-1w fr-pb-4w">
+        <div id="statistiques"
+             class="fr-grid-row fr-grid-row--gutters fr-mt-4w fr-mb-1w fr-pb-4w">
           <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px" height="100px">
             <p>
               <big>100000</big>
               <br>
@@ -56,7 +57,7 @@
             </p>
           </div>
           <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}" alt="Map pictogram" width="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}" alt="Map pictogram" width="100px" height="100px">
             <p>
               <big>1000000</big>
               <br>
@@ -64,7 +65,7 @@
             </p>
           </div>
           <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}" alt="Location France pictogram" width="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}" alt="Location France pictogram" width="100px" height="100px">
             <p>
               <big>6000</big>
               <br>
@@ -72,17 +73,15 @@
             </p>
           </div>
         </div>
-        <h2 class="fr-m-2w fr-pt-4w fr-tile__body">
-          De nombreuses collectivités et organismes publics utilisent uMap
-        </h2>
+        <h2 class="fr-m-2w fr-pt-4w fr-tile__body">De nombreuses collectivités et organismes publics utilisent uMap</h2>
         <div class="fr-tile__body">
-          <img src="{% static "umap/logos_todo.png" %}" alt="TODO" width="1000px">
+          <img src="{% static "umap/logos_todo.png" %}" alt="TODO" width="1000px" height="298px">
         </div>
       </div>
     </div>
     <div id="exemples">
       <div class="fr-container">
-        <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Des exemples de cartes créées par des collectivités</h2>
+        <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Exemples de cartes réalisées par des collectivités</h2>
         <div class="fr-grid-row fr-grid-row--gutters fr-mb-1w fr-pb-4w">
           <div class="fr-col fr-col-md-4">
             <div class="fr-card fr-enlarge-link">
@@ -100,7 +99,9 @@
                 <div class="fr-card__img">
                   <img class="fr-responsive-img"
                        src="/img/placeholder.16x9.png"
-                       alt="[À MODIFIER - vide ou texte alternatif de l’image]">
+                       alt="[À MODIFIER - vide ou texte alternatif de l’image]"
+                       width="384px"
+                       height="216px">
                   <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
                 </div>
               </div>
@@ -122,7 +123,9 @@
                 <div class="fr-card__img">
                   <img class="fr-responsive-img"
                        src="/img/placeholder.16x9.png"
-                       alt="[À MODIFIER - vide ou texte alternatif de l’image]">
+                       alt="[À MODIFIER - vide ou texte alternatif de l’image]"
+                       width="384px"
+                       height="216px">
                   <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
                 </div>
               </div>
@@ -144,7 +147,9 @@
                 <div class="fr-card__img">
                   <img class="fr-responsive-img"
                        src="/img/placeholder.16x9.png"
-                       alt="[À MODIFIER - vide ou texte alternatif de l’image]">
+                       alt="[À MODIFIER - vide ou texte alternatif de l’image]"
+                       width="384px"
+                       height="216px">
                   <!-- L’alternative de l’image (attribut alt) doit toujours être présente, sa valeur peut-être vide (image n’apportant pas de sens supplémentaire au contexte) ou non (porteuse de texte ou apportant du sens) selon votre contexte -->
                 </div>
               </div>
@@ -152,15 +157,14 @@
           </div>
           <p class="fr-m-4w btns-group--right">
             <a class="fr-btn fr-btn--lg fr-btn--secondary"
-               href="{{ demo_map.get_absolute_url }}">Voir plus de cartes</a>
+               href="{{ demo_map.get_absolute_url }}">Explorer les cartes →</a>
           </p>
         </div>
       </div>
     </div>
     <div id="tutoriel">
       <div class="fr-container">
-        <h2 class="fr-mb-4w fr-mt-4w fr-pt-6w">Créez une carte et partagez-la !</h2>
-        <h3>Démarrage rapide</h3>
+        <h2 class="fr-mb-4w fr-mt-4w fr-pt-6w">Créez une carte et partagez une carte</h2>
         <ul>
           <li>Choisir la zone du monde qui vous intéresse</li>
           <li>Choisir l’aspect du fond de carte</li>
@@ -172,17 +176,19 @@
           <a class="fr-btn" href="{% url "map_new" %}">
             <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
           </a>
-          <a class="fr-btn fr-btn--secondary" href="">
-            <span class="fr-icon-map-pin-user-fill fr-mr-1w" aria-hidden="true"></span> Accéder à mes cartes
-          </a>
         </p>
-        <h3 class="fr-mt-4w">Fonctionnalités avancées de uMap</h3>
+        <h2 class="fr-mb-4w fr-mt-4w fr-pt-6w">Utilisez les fonctionnalités avancées de uMap</h2>
         <ul>
-          <li>Gérer les options de la carte : afficher une minicarte, géolocaliser l’utilisateur…</li>
+          <li>Afficher une minicarte, géolocaliser l’utilisateur…</li>
           <li>Import des données géographiques en masse (geojson, gpx, kml, osm…)</li>
           <li>Choisir la licence de vos données</li>
-          <li>Exporter et partager votre carte</li>
+          <li>Utiliser des données distantes</li>
         </ul>
+        <p class="fr-mt-4w">
+          <a class="fr-btn fr-btn--secondary" href="">
+            <span class="fr-icon-git-repository-line fr-mr-1w" aria-hidden="true"></span> Accéder à la documentation →
+          </a>
+        </p>
         <div class="fr-callout fr-callout--green-menthe fr-mt-4w fr-mb-4w">
           <h3 class="fr-callout__title">Découvrir uMap à partir d’une carte à disposition des testeurs et testeuses</h3>
           <p class="fr-callout__text">
@@ -199,8 +205,6 @@
 {% block footer %}
   {% include "umap/content_footer.html" %}
 {% endblock footer %}
-
 {% block bottom_js %}
-  <script src="{% static "umap/theme.js" %}" type="module">
-  </script>
+  <script src="{% static "umap/theme.js" %}" type="module"></script>
 {% endblock bottom_js %}
