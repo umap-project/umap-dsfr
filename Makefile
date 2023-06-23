@@ -5,6 +5,11 @@ install: ## Install the dependencies
 	python3 -m pip install --upgrade pip
 	python3 -m pip install -e .
 
+.PHONY: jsinstall
+jsinstall: ## Install the JS dependencies
+	npm install
+	npm run vendors
+
 .PHONY: develop
 develop: ## Install the test and dev dependencies
 	python3 -m pip install -e .[dev]
@@ -19,14 +24,17 @@ lint-templates: ## Lint template files
 
 .PHONY: dsfr-lite
 dsfr-lite: ## Copy DSFR pertinent files and purge the huge CSS
-	npm install
 	mkdir -p umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/fonts umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/icons umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/favicon umap_dsfr/static/umap/dsfr-lite
+	cp -R node_modules/@gouvfr/dsfr/dist/artwork/pictograms umap_dsfr/static/umap/dsfr-lite
 	./node_modules/purgecss/bin/purgecss.js --config purgecss.config.js
 	# Maybe not Linux-compatible? https://stackoverflow.com/a/22122819
 	sed -i '' 's/..\/..\///g' umap_dsfr/static/umap/dsfr-lite/icons.min.css
+	sed -i '' 's/#E1000F/#009081/g' umap_dsfr/static/umap/dsfr-lite/pictograms/map/map.svg
+	sed -i '' 's/#E1000F/#009081/g' umap_dsfr/static/umap/dsfr-lite/pictograms/map/location-france.svg
+	sed -i '' 's/#E1000F/#009081/g' umap_dsfr/static/umap/dsfr-lite/pictograms/digital/avatar.svg
 	# See https://github.com/GouvernementFR/dsfr/issues/617
 	sed -i '' 's/  \/\*! media sm \*\///g' umap_dsfr/static/umap/dsfr-lite/dsfr.min.css
 	sed -i '' 's/  \/\*! media md \*\///g' umap_dsfr/static/umap/dsfr-lite/dsfr.min.css

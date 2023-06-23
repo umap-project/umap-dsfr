@@ -3,6 +3,7 @@
 ## Installation
 
     pip install git+https://github.com/umap-project/umap-dsfr
+    make jsinstall
     make dsfr-lite
 
 
