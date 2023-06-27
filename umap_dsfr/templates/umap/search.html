@@ -1,0 +1,25 @@
+{% extends "umap/content.html" %}
+{% load umap_tags compress i18n static %}
+{% block maincontent %}
+  <main role="main" class="fr-container-fluid">
+    <div id="exemples">
+      <div class="fr-container">
+        {% include "umap/search_bar.html" %}
+        {% if q %}
+          {% if maps %}
+              <h3 class="fr-tile__body">
+                {% blocktranslate count counter=count %}
+                  {{ count }} map found:
+                {% plural %}
+                  {{ count }} maps found:
+                {% endblocktranslate %}
+              </h3>
+              {% include "umap/map_list.html" with prefix="search_map" %}
+          {% else %}
+              <h3 class="fr-tile__body">{% trans "No map found." %}</h3>
+          {% endif %}
+        {% endif %}
+      </div>
+    </div>
+  </main>
+{% endblock maincontent %}

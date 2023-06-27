@@ -1,0 +1,12 @@
+<h2 class="fr-m-4w fr-pt-6w fr-tile__body">Trouver une carte en particulier</h2>
+<form action="{% url "search" %}" method="get">
+  <div class="fr-search-bar fr-search-bar--lg fr-pb-6w " role="search">
+    <label class="fr-label" for="search-map">
+      Recherche
+    </label>
+    <input class="fr-input" placeholder="Rechercher" type="search" id="search-map" name="q" value="{{ q|default:"" }}">
+    <button class="fr-btn">
+      Rechercher
+    </button>
+  </div>
+</form>

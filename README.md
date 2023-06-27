@@ -17,6 +17,9 @@ In your local settings, add the `umap_dsfr` app:
         "umap_dsfr",
     ) + INSTALLED_APPS
 
+And set the correct number of results per search:
+
+    UMAP_MAPS_PER_SEARCH = 24
 
 Add MonComptePro settings:
 

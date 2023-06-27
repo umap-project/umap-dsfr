@@ -1,0 +1,110 @@
+{% extends "umap/content.html" %}
+{% load umap_tags compress i18n static %}
+{% block maincontent %}
+  <main role="main" class="fr-container-fluid">
+    <div id="intro">
+      <div class="fr-container">
+        <div class="fr-grid-row fr-grid-row--center">
+          <div class="fr-col-xs-12 fr-col-md-6 fr-mb-3w fr-pt-4w at-centered">
+            <h1>Une solution simple pour créer des cartes en ligne</h1>
+            <p class="fr-highlight fr-highlight--green-menthe">
+              uMap est un outil libre et open-source utilisé par les collectivités et référencé dans <a href="https://sill.code.gouv.fr/detail?name=uMap">le catalogue SILL</a>.
+            </p>
+            <p class="fr-mt-4w">
+              <a class="fr-btn" href="{% url "map_new" %}">
+                <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
+              </a>
+            </p>
+          </div>
+          <img class="fr-m-5w"
+               src="{{ STATIC_URL }}umap/img/osm.svg"
+               alt=""
+               width="256px"
+               height="256px" />
+        </div>
+      </div>
+    </div>
+    <div>
+      <div class="fr-container">
+        <div id="statistiques"
+             class="fr-grid-row fr-grid-row--gutters fr-mt-4w fr-mb-1w fr-pb-4w">
+          <div class="fr-col fr-col-md-4 fr-tile__body">
+            <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px" height="100px">
+            <p>
+              <big>100000</big>
+              <br>
+              comptes utilisateurs
+            </p>
+          </div>
+          <div class="fr-col fr-col-md-4 fr-tile__body">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}" alt="Map pictogram" width="100px" height="100px">
+            <p>
+              <big>1000000</big>
+              <br>
+              cartes créées
+            </p>
+          </div>
+          <div class="fr-col fr-col-md-4 fr-tile__body">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}" alt="Location France pictogram" width="100px" height="100px">
+            <p>
+              <big>6000</big>
+              <br>
+              utilisateurs actifs par semaine
+            </p>
+          </div>
+        </div>
+        <h2 class="fr-m-2w fr-pt-4w fr-tile__body">De nombreuses collectivités et organismes publics utilisent uMap</h2>
+        <div class="fr-tile__body">
+          <img src="{% static "umap/logos_todo.png" %}" alt="TODO" width="1000px" height="298px">
+        </div>
+      </div>
+    </div>
+    <div id="exemples">
+      <div class="fr-container">
+        <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Exemples de cartes réalisées par des collectivités</h2>
+        {% with maps=maps|slice:":3" %}
+          {% include "umap/map_list.html" %}
+        {% endwith %}
+        {% include "umap/search_bar.html" %}
+      </div>
+    </div>
+    <div id="tutoriel">
+      <div class="fr-container">
+        <h2 class="fr-mb-4w fr-mt-4w fr-pt-6w">Créez une carte et partagez une carte</h2>
+        <ul>
+          <li>Choisir la zone du monde qui vous intéresse</li>
+          <li>Choisir l’aspect du fond de carte</li>
+          <li>Placer des points, des lignes ou des zones</li>
+          <li>Ajouter des légendes</li>
+          <li>Catégoriser pour différencier vos éléments</li>
+        </ul>
+        <p class="fr-mt-4w">
+          <a class="fr-btn" href="{% url "map_new" %}">
+            <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
+          </a>
+        </p>
+        <h2 class="fr-mb-4w fr-mt-4w fr-pt-6w">Utilisez les fonctionnalités avancées de uMap</h2>
+        <ul>
+          <li>Afficher une minicarte, géolocaliser l’utilisateur…</li>
+          <li>Import des données géographiques en masse (geojson, gpx, kml, osm…)</li>
+          <li>Choisir la licence de vos données</li>
+          <li>Utiliser des données distantes</li>
+        </ul>
+        <p class="fr-mt-4w">
+          <a class="fr-btn fr-btn--secondary" href="">
+            <span class="fr-icon-git-repository-line fr-mr-1w" aria-hidden="true"></span> Accéder à la documentation →
+          </a>
+        </p>
+        <div class="fr-callout fr-callout--green-menthe fr-mt-4w fr-mb-4w">
+          <h3 class="fr-callout__title">Découvrir uMap à partir d’une carte à disposition des testeurs et testeuses</h3>
+          <p class="fr-callout__text">
+            <a class="fr-btn fr-btn--secondary"
+               href="{{ demo_map.get_absolute_url }}">
+              <span class="fr-icon-road-map-line fr-mr-1w" aria-hidden="true"></span> Tester sur la carte Démo
+            </a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+{% endblock maincontent %}

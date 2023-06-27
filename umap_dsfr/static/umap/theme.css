@@ -30,18 +30,19 @@
 #exemples {
     background-color: rgb(67, 79, 103);
 }
-#exemples h2 {
+#exemples h2,
+#exemples h3.fr-tile__body {
     color: var(--grey-975-75);
 }
-#exemples .btns-group--right {
+#exemples .btns-group--center {
     width: 100%;
-    text-align: right;
+    text-align: center;
 }
-#exemples .btns-group--right a {
+#exemples .btns-group--center a {
     color: white;
     box-shadow: inset 0 0 0 1px white;
 }
-#exemples .btns-group--right a:hover {
+#exemples .btns-group--center a:hover {
     color: inherit;
     background-color: white;
 }
@@ -67,3 +68,11 @@
     display: block;
     padding-top: 1rem;
 }
+
+.umap-help-box {
+    display: none; /* TODISCUSS */
+}
+.map_fragment {
+    height: 250px;
+}
+
