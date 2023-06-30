@@ -34,3 +34,9 @@ Add MonComptePro settings:
         'umap_dsfr.moncomptepro.MonComptePro',
         'django.contrib.auth.backends.ModelBackend',
     )
+
+Set the correct user-related settings:
+
+    USER_DISPLAY_NAME = "{first_name} {last_name}"
+    USER_AUTOCOMPLETE_FIELDS = ["^email"]
+    USER_URL_FIELD = "pk"

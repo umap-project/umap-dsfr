@@ -65,7 +65,12 @@
         {% with maps=maps|slice:":3" %}
           {% include "umap/map_list.html" %}
         {% endwith %}
-        {% include "umap/search_bar.html" %}
+        <p class="fr-p-4w btns-group--center">
+          <a class="fr-btn fr-btn--lg fr-btn--secondary"
+             href="{% url "search" %}">
+            Explorer les cartes
+          </a>
+        </p>
       </div>
     </div>
     <div id="tutoriel">

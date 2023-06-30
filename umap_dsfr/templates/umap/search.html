@@ -18,6 +18,12 @@
           {% else %}
               <h3 class="fr-tile__body">{% trans "No map found." %}</h3>
           {% endif %}
+        {% else %}
+          <h3 class="fr-tile__body">
+            Dernières cartes créées
+          </h3>
+          {% include "umap/map_list.html" with prefix="search_map" %}
+          {% include "umap/search_bar.html" %}
         {% endif %}
       </div>
     </div>
