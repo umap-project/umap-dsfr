@@ -23,6 +23,13 @@
     background-size: 50px auto;
     padding-left: 60px;
 }
+.fr-header__tools-links .umap-btn--primary {
+  --hover-tint: var(--hover);
+  --hover: var(--background-action-high-blue-france-hover);
+  --active: var(--background-action-high-blue-france-active);
+  background-color: var(--background-action-high-blue-france);
+  color: var(--text-inverted-blue-france);
+}
 
 #intro {
     background-color: rgb(233, 250, 252);

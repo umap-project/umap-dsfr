@@ -14,9 +14,7 @@
           </div>
         </div>
         <div class="fr-card__header">
-          <div class="fr-card__img">
-              {% map_fragment map_inst prefix=prefix page=request.GET.p %}
-          </div>
+          <div class="fr-card__img">{% map_fragment map_inst prefix=prefix page=request.GET.p %}</div>
         </div>
       </div>
     </div>
@@ -26,9 +24,7 @@
   <div>
     <p class="fr-p-4w btns-group--center">
       <a class="fr-btn fr-btn--lg fr-btn--secondary more_button"
-         href="?{% paginate_querystring maps.next_page_number %}">
-        {% trans "More" %}
-      </a>
+         href="?{% paginate_querystring maps.next_page_number %}">{% trans "More" %}</a>
     </p>
   </div>
 {% endif %}

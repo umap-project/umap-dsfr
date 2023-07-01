@@ -33,12 +33,24 @@
         <div class="fr-header__tools">
           <div class="fr-header__tools-links">
             <ul class="fr-btns-group">
+              <li>
+                <a class="fr-btn umap-btn--primary fr-icon-add-circle-line fr-mr-4w"
+                   href="{% url "map_new" %}">Créer une carte</a>
+              </li>
               {% if user.is_authenticated %}
                 <li>
-                  <a href="{{ user.get_url }}">{% trans "My maps" %} ({{ user }})</a>
+                  <a class="fr-btn fr-icon-account-pin-circle-line"
+                     href="{{ user.get_url }}">Mes cartes</a>
                 </li>
                 <li>
-                  <a href="{{ user.get_stars_url }}">{% trans "Starred maps" %}</a>
+                  <a class="fr-btn fr-icon-star-s-fill" href="{{ user.get_stars_url }}">Mes favoris</a>
+                </li>
+              {% endif %}
+              {% if user.is_authenticated %}
+                <li>
+                  <a class="fr-btn fr-icon-lock-line"
+                     href="{% url "logout" %}"
+                     class="logout">Se déconnecter ({{ user }})</a>
                 </li>
               {% else %}
                 <li>
@@ -46,21 +58,40 @@
                      href="{% url "social:begin" "moncomptepro" %}">Se connecter</a>
                 </li>
               {% endif %}
-              {% if user.is_authenticated %}
-                <li>
-                  <a href="{% url "logout" %}" class="logout">{% trans "Log out" %}</a>
-                </li>
-              {% endif %}
-              <li>
-                <a class="fr-btn fr-icon-add-circle-line" href="{% url "map_new" %}">Créer une carte</a>
-              </li>
-              <li>
-                <a class="fr-btn fr-icon-git-repository-line" href="">Documentation</a>
-              </li>
             </ul>
           </div>
         </div>
       </div>
+    </div>
+  </div>
+  <div class="fr-header__menu fr-modal"
+       id="modal-menu-mobile"
+       data-fr-js-modal="true"
+       data-fr-js-header-modal="true">
+    <div class="fr-container">
+      <button class="fr-btn fr-btn--close"
+              aria-controls="modal-menu-mobile"
+              data-fr-js-modal-button="true">Fermer</button>
+      <nav class="fr-nav"
+           id="navigation-menu-mobile"
+           role="navigation"
+           aria-label="Menu principal"
+           data-fr-js-navigation="true">
+        <ul class="fr-nav__list">
+          <li class="fr-nav__item" data-fr-js-navigation-item="true">
+            <a class="fr-nav__link" href="{% url "home" %}">Accueil</a>
+          </li>
+          <li class="fr-nav__item" data-fr-js-navigation-item="true">
+            <a class="fr-nav__link" href="{% url "search" %}">Explorer les cartes</a>
+          </li>
+          <li class="fr-nav__item" data-fr-js-navigation-item="true">
+            <a class="fr-nav__link"
+               href="https://docs.framasoft.org/fr/umap/"
+               target="_blank"
+               rel="noopener">Documentation</a>
+          </li>
+        </ul>
+      </nav>
     </div>
   </div>
 </header>
