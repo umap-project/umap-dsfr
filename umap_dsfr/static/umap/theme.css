@@ -83,3 +83,10 @@
     height: 250px;
 }
 
+/* ****************************** */
+/* Overriding some intrusive DSFR */
+/* ****************************** */
+
+.fr-card__img img {
+  display: initial;
+}
