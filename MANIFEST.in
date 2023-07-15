@@ -1,0 +1,3 @@
+include README.md
+recursive-include umap_dsfr/static *
+recursive-include umap_dsfr/templates *
