@@ -40,7 +40,7 @@
               {% if user.is_authenticated %}
                 <li>
                   <a class="fr-btn fr-icon-account-pin-circle-line"
-                     href="{{ user.get_url }}">Mes cartes</a>
+                     href="{% url 'user_dashboard' %}">Mes cartes</a>
                 </li>
                 <li>
                   <a class="fr-btn fr-icon-star-s-fill" href="{{ user.get_stars_url }}">Mes favoris</a>

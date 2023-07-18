@@ -21,7 +21,7 @@
   {% endfor %}
 </div>
 {% if maps.has_next %}
-  <div>
+  <div class="ajax-paginated">
     <p class="fr-p-4w btns-group--center">
       <a class="fr-btn fr-btn--lg fr-btn--secondary more_button"
          href="?{% paginate_querystring maps.next_page_number %}">{% trans "More" %}</a>

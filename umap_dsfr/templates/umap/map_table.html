@@ -1,0 +1,45 @@
+{% load umap_tags umap_tags i18n %}
+<div class="fr-table fr-table--bordered fr-table--layout-fixed">
+  <table>
+    {% if not is_ajax %}
+      <thead>
+        <tr>
+          <th scope="col">{% blocktrans %}Map{% endblocktrans %}</th>
+          <th scope="col">{% blocktrans %}Name{% endblocktrans %}</th>
+          <th scope="col">{% blocktrans %}Who can see / edit{% endblocktrans %}</th>
+          <th scope="col">{% blocktrans %}Last save{% endblocktrans %}</th>
+          <th scope="col">{% blocktrans %}Owner{% endblocktrans %}</th>
+          <th scope="col">{% blocktrans %}Actions{% endblocktrans %}</th>
+        </tr>
+      </thead>
+    {% endif %}
+    <tbody>
+      {% for map_inst in maps %}
+        <tr>
+          <td>{% map_fragment map_inst prefix=prefix page=request.GET.p %}</td>
+          <td>
+            <a href="{{ map_inst.get_absolute_url }}">{{ map_inst.name }}</a>
+          </td>
+          <td>{{ map_inst.get_share_status_display }} / {{ map_inst.get_edit_status_display }}</td>
+          <td>{{ map_inst.modified_at }}</td>
+          <td>
+            <a href="{{ map_inst.owner.get_url }}">{{ map_inst.owner }}</a>
+          </td>
+          <td>
+            <a href="{{ map_inst.get_absolute_url }}?share">{% translate "Share" %}</a>
+            <a href="{{ map_inst.get_absolute_url }}?edit">{% translate "Edit" %}</a>
+            <a href="{{ map_inst.get_absolute_url }}?download">{% translate "Download" %}</a>
+          </td>
+        </tr>
+      {% endfor %}
+    </tbody>
+  </table>
+</div>
+{% if maps.has_next %}
+  <div class="ajax-paginated">
+    <p class="fr-p-4w btns-group--center">
+      <a href="?{% paginate_querystring maps.next_page_number %}"
+         class="fr-btn fr-btn--lg fr-btn--secondary more_button">{% trans "More" %}</a>
+    </p>
+  </div>
+{% endif %}

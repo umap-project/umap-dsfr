@@ -41,7 +41,7 @@
 #exemples h3.fr-tile__body {
     color: var(--grey-975-75);
 }
-#exemples .btns-group--center {
+.ajax-paginated .btns-group--center {
     width: 100%;
     text-align: center;
 }

@@ -4,6 +4,7 @@
   <main role="main" class="fr-container-fluid">
     <div id="exemples">
       <div class="fr-container">
+        <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Explorer les cartes</h2>
         {% include "umap/search_bar.html" %}
         {% if q %}
           {% if maps %}
@@ -21,7 +22,6 @@
         {% else %}
           <h3 class="fr-tile__body">Dernières cartes créées</h3>
           {% include "umap/map_list.html" with prefix="search_map" %}
-          {% include "umap/search_bar.html" %}
         {% endif %}
       </div>
     </div>
