@@ -9,7 +9,6 @@ class MonComptePro(OpenIdConnectAuth):
         "id_token",
         "refresh_token",
         "organization",
-        "phone_number",
         "job",
         ("sub", "id"),
     ]
