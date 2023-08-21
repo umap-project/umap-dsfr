@@ -4,8 +4,8 @@
   <main role="main" class="fr-container-fluid">
     <div id="intro">
       <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--center">
-          <div class="fr-col-xs-12 fr-col-md-6 fr-mb-3w fr-pt-4w at-centered">
+        <div class="fr-grid-row fr-py-4w">
+          <div class="fr-col-xs-12 fr-col-md-6 fr-mr-8w fr-mt-3w fr-mb-3w fr-pt-4w at-centered">
             <h1>Une solution simple pour créer des cartes en ligne</h1>
             <p class="fr-highlight fr-highlight--green-menthe">
               uMap est un outil libre et open-source utilisé par les collectivités et référencé dans <a href="https://sill.code.gouv.fr/detail?name=uMap">le catalogue SILL</a>.
@@ -16,18 +16,18 @@
               </a>
             </p>
           </div>
-          <img class="fr-m-5w"
+          <img class="fr-m-4w"
                src="{{ STATIC_URL }}umap/img/osm.svg"
                alt=""
-               width="256px"
-               height="256px" />
+               width="326px"
+               height="326px" />
         </div>
       </div>
     </div>
     <div>
       <div class="fr-container">
         <div id="statistiques"
-             class="fr-grid-row fr-grid-row--gutters fr-mt-4w fr-mb-1w fr-pb-4w">
+             class="fr-grid-row fr-grid-row--gutters fr-pb-4w">
           <div class="fr-col fr-col-md-4 fr-tile__body">
             <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px" height="100px">
             <p>
@@ -60,7 +60,7 @@
       </div>
     </div>
     <div id="exemples">
-      <div class="fr-container">
+      <div class="fr-container fr-py-2w">
         <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Exemples de cartes réalisées par des collectivités</h2>
         {% with maps=maps|slice:":3" %}
           {% include "umap/map_list.html" %}
@@ -97,7 +97,7 @@
             <span class="fr-icon-git-repository-line fr-mr-1w" aria-hidden="true"></span> Accéder à la documentation →
           </a>
         </p>
-        <div class="fr-callout fr-callout--green-menthe fr-mt-4w fr-mb-4w">
+        <div class="fr-callout fr-callout--green-archipel-975 fr-mt-8w fr-mb-4w">
           <h3 class="fr-callout__title">Découvrir uMap à partir d’une carte à disposition des testeurs et testeuses</h3>
           <p class="fr-callout__text">
             <a class="fr-btn fr-btn--secondary"

@@ -22,6 +22,12 @@
     background-repeat: no-repeat;
     background-size: 50px auto;
     padding-left: 60px;
+    font-size: 60px;
+}
+.fr-header__service-title {
+    font-size: 2rem;
+    letter-spacing: -1.5px;
+    color: #323e56;
 }
 .fr-header__tools-links .umap-btn--primary {
   --hover-tint: var(--hover);
@@ -31,17 +37,26 @@
   color: var(--text-inverted-blue-france);
 }
 
+.fr-callout--green-archipel-975 {
+  box-shadow: inset 0.25rem 0 0 0 #009099;
+  background-color: #e5fbfd;
+}
+
+.fr-search-bar {
+  max-width: 40rem;
+}
+
 #intro {
     background-color: rgb(233, 250, 252);
 }
 #exemples {
-    background-color: rgb(67, 79, 103);
+    background-color: #263b58;
 }
 #exemples h2,
 #exemples h3.fr-tile__body {
-    color: var(--grey-975-75);
+    color: var(--grey-1000-100);
 }
-.ajax-paginated .btns-group--center {
+.btns-group--center {
     width: 100%;
     text-align: center;
 }

@@ -3,8 +3,10 @@
 {% block maincontent %}
   <main role="main" class="fr-container-fluid">
     <div id="exemples">
-      <div class="fr-container">
-        <h2 class="fr-m-4w fr-pt-6w fr-tile__body">Explorer les cartes</h2>
+      <div class="fr-container fr-tile--horizontal">
+        <h2 class="fr-mb-4w fr-ml-0 fr-pt-6w fr-tile__body">
+          Explorer les cartes créées par la communauté
+        </h2>
         {% include "umap/search_bar.html" %}
         {% if q %}
           {% if maps %}
@@ -17,10 +19,10 @@
             </h3>
             {% include "umap/map_list.html" with prefix="search_map" %}
           {% else %}
-            <h3 class="fr-tile__body">{% trans "No map found." %}</h3>
+            <h3 class="fr-tile__body fr-ml-0">{% trans "No map found." %}</h3>
           {% endif %}
         {% else %}
-          <h3 class="fr-tile__body">Dernières cartes créées</h3>
+          <h3 class="fr-tile__body fr-ml-0">Dernières cartes créées</h3>
           {% include "umap/map_list.html" with prefix="search_map" %}
         {% endif %}
       </div>

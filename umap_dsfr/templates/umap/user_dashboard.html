@@ -1,12 +1,12 @@
 {% extends "umap/content.html" %}
 {% load i18n %}
 {% block head_title %}
-  {{ SITE_NAME }} - {% trans "My dashboard" %}
+  {{ SITE_NAME }} - {% trans "Mes cartes" %}
 {% endblock head_title %}
 {% block maincontent %}
   {% trans "Search my maps" as placeholder %}
   <div class="fr-container">
-    <h2 class="fr-m-4w fr-pt-6w fr-tile__body">{% trans "My dashboard" %}</h2>
+    <h2 class="fr-m-4w fr-pt-6w fr-tile__body">{% trans "Mes cartes" %}</h2>
     {% include "umap/search_bar.html" with action=request.get_full_path placeholder=placeholder %}
   </div>
   <div class="fr-container">
@@ -14,7 +14,13 @@
       {% include "umap/map_table.html" %}
     {% else %}
       <div>
-        {% blocktrans %}You have no map yet.{% endblocktrans %} <a href="{% url 'map_new' %}">{% translate "Create a map" %}</a>
+        <p>Vous n’avez pas encore de carte enregistrée dans votre espace.</p>
+
+        <p class="fr-mt-4w">
+          <a class="fr-btn" href="{% url "map_new" %}">
+            <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
+          </a>
+        </p>
       </div>
     {% endif %}
   </div>
