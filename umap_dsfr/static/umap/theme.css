@@ -46,6 +46,10 @@
   max-width: 40rem;
 }
 
+.fr-header__tools-links [aria-current] {
+  border-bottom: 1px solid var(--text-action-high-blue-france);
+}
+
 #intro {
     background-color: rgb(233, 250, 252);
 }

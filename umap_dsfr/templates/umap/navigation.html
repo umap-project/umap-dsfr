@@ -38,11 +38,17 @@
               </li>
               {% if user.is_authenticated %}
                 <li>
+                  {% url "user_dashboard" as url %}
                   <a class="fr-btn fr-icon-account-fill"
-                     href="{% url 'user_dashboard' %}">Mes cartes</a>
+                     href="{{ url}}"
+                     {% if request.path == url %}aria-current="page"{% endif %}>Mes cartes</a>
                 </li>
                 <li>
-                  <a class="fr-btn fr-icon-star-s-fill" href="{{ user.get_stars_url }}">Mes favoris</a>
+                  {% with user.get_stars_url as url %}
+                  <a class="fr-btn fr-icon-star-s-fill"
+                     href="{{ url }}"
+                     {% if request.path == url %}aria-current="page"{% endif %}>Mes favoris</a>
+                  {% endwith %}
                 </li>
               {% endif %}
               {% if user.is_authenticated %}
@@ -78,10 +84,12 @@
            data-fr-js-navigation="true">
         <ul class="fr-nav__list">
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
-            <a class="fr-nav__link" href="{% url "home" %}" aria-current="page">Accueil</a>
+            {% url "home" as url %}
+            <a class="fr-nav__link" href="{{ url }}" {% if request.path == url %}aria-current="page"{% endif %}>Accueil</a>
           </li>
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
-            <a class="fr-nav__link" href="{% url "search" %}">Explorer les cartes</a>
+            {% url "search" as url %}
+            <a class="fr-nav__link" href="{{ url }}" {% if request.path == url %}aria-current="page"{% endif %}>Explorer les cartes</a>
           </li>
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
             <a class="fr-nav__link"
