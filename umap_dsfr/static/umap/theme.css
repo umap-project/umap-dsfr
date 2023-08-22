@@ -47,7 +47,7 @@
 }
 
 .fr-header__tools-links [aria-current] {
-  border-bottom: 1px solid var(--text-action-high-blue-france);
+  border: 1px solid var(--border-default-grey);
 }
 
 #intro {
@@ -74,6 +74,13 @@
 }
 #tutoriel h2 {
     color: var(--green-menthe-sun-373-moon-652);
+}
+#tutoriel img#tutoriel-exemple {
+  border-top: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
+  border-bottom: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
+}
+.u-center {
+  text-align: center;
 }
 
 #statistiques {
