@@ -52,6 +52,7 @@
 {% endblock footer %}
 {% block bottom_js %}
   {{ block.super }}
+  <script src="{% static "umap/dsfr-lite/dsfr.module.js" %}" type="module"></script>
   <script src="{% static "umap/theme.js" %}" type="module"></script>
   <script type="text/javascript">
     !(function () {

@@ -6,6 +6,7 @@ module.exports = {
   ],
   safelist: [
     'body', // Useful to keep the Marianne font.
+    'fr-modal--opened', // Useful for the responsive burger menu.
   ],
   output: 'umap_dsfr/static/umap/dsfr-lite/'
 }

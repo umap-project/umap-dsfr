@@ -29,6 +29,8 @@ dsfr-lite: ## Copy DSFR pertinent files and purge the huge CSS
 	cp -R node_modules/@gouvfr/dsfr/dist/icons umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/favicon umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/artwork/pictograms umap_dsfr/static/umap/dsfr-lite
+	cp -R node_modules/@gouvfr/dsfr/dist/dsfr.module.js umap_dsfr/static/umap/dsfr-lite
+	cp -R node_modules/@gouvfr/dsfr/dist/dsfr.module.js.map umap_dsfr/static/umap/dsfr-lite
 	./node_modules/purgecss/bin/purgecss.js --config purgecss.config.js
 	# Maybe not Linux-compatible? https://stackoverflow.com/a/22122819
 	sed -i '' 's/..\/..\///g' umap_dsfr/static/umap/dsfr-lite/icons.min.css
