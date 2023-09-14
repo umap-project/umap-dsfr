@@ -5,7 +5,7 @@
     <div id="intro">
       <div class="fr-container">
         <div class="fr-grid-row fr-py-4w">
-          <div class="fr-col-xs-12 fr-col-md-6 fr-mr-8w fr-mt-3w fr-mb-3w fr-pt-4w at-centered">
+          <div class="fr-col-xs-12 fr-col-lg-6 fr-mr-8w fr-mt-3w fr-mb-3w fr-pt-4w at-centered">
             <h1>Une solution simple pour créer des cartes en ligne</h1>
             <p class="fr-highlight fr-highlight--green-menthe">
               uMap est un outil libre et open-source utilisé par les collectivités et référencé dans <a href="https://sill.code.gouv.fr/detail?name=uMap">le catalogue SILL</a> (Socle Interministériel des Logiciels Libres).
@@ -27,25 +27,37 @@
     <div>
       <div class="fr-container">
         <div id="statistiques"
-             class="fr-grid-row fr-grid-row--gutters fr-pb-4w">
-          <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px" height="100px">
+             class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-pt-4w fr-pb-4w">
+          <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
+            <img
+              src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}"
+              alt="Avatar pictogram"
+              width="100px"
+              height="100px">
             <p>
               <big>100000</big>
               <br>
               comptes utilisateurs
             </p>
           </div>
-          <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}" alt="Map pictogram" width="100px" height="100px">
+          <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
+            <img
+              src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}"
+              alt="Map pictogram"
+              width="100px"
+              height="100px">
             <p>
               <big>1000000</big>
               <br>
               cartes créées
             </p>
           </div>
-          <div class="fr-col fr-col-md-4 fr-tile__body">
-            <img src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}" alt="Location France pictogram" width="100px" height="100px">
+          <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
+            <img
+              src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}"
+              alt="Location France pictogram"
+              width="100px"
+              height="100px">
             <p>
               <big>6000</big>
               <br>
@@ -55,7 +67,19 @@
         </div>
         <h2 class="fr-m-2w fr-pt-4w fr-tile__body">De nombreuses collectivités et organismes publics utilisent uMap</h2>
         <div class="fr-tile__body">
-          <img src="{% static "umap/img/logos-collterr.png" %}" alt="Logos des utilisateurs de uMap" width="1000px" height="225px">
+          <picture>
+            <source
+              media="(min-width: 576px)"
+              srcset="{% static "umap/img/logos-collterr.png" %}">
+            <img
+              id="location-france"
+              src="{% static "umap/img/logos-collterr-mobile.png" %}"
+              alt="Logos des utilisateurs de uMap"
+              width="591px"
+              height="500px">
+          </picture>
+
+
         </div>
       </div>
     </div>
@@ -73,7 +97,7 @@
     <div id="tutoriel">
       <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--gutters fr-mt-8w">
-          <div class="fr-col">
+          <div class="fr-col fr-col-12 fr-col-md-6">
             <h2 class="fr-mb-4w">Créez et partagez une carte</h2>
             <ul>
               <li>Choisir la zone du monde qui vous intéresse</li>
@@ -88,7 +112,7 @@
               </a>
             </p>
           </div>
-          <div class="fr-col">
+          <div class="fr-col fr-col-12 fr-col-md-6">
             <img id="tutoriel-exemple"
               src="{{ STATIC_URL }}umap/img/exemple-umap.png"
               alt="Capture d'écran d'un exemple de carte uMap"
@@ -97,13 +121,14 @@
           </div>
         </div>
         <div class="fr-grid-row fr-grid-row--gutters fr-mt-12w fr-mb-8w">
-          <div class="fr-col u-center">
-            <img src="{{ STATIC_URL }}umap/img/illustration-personne-code.svg"
+          <div class="fr-col fr-col-12 fr-col-md-6 u-center">
+            <img id="illustration-personne-code"
+              src="{{ STATIC_URL }}umap/img/illustration-personne-code.svg"
               alt="Illustration d'une personne codant"
               width="242px"
               height="350px" />
           </div>
-          <div class="fr-col">
+          <div class="fr-col fr-col-12 fr-col-md-6">
             <h2 class="fr-mb-4w">Utilisez les fonctionnalités avancées de uMap</h2>
             <ul>
               <li>Afficher une minicarte, géolocaliser l’utilisateur…</li>

@@ -53,6 +53,11 @@
 #intro {
     background-color: rgb(233, 250, 252);
 }
+@media (max-width: 992px) {
+    #intro img {
+        display: none;
+    }
+}
 #exemples {
     background-color: #263b58;
 }
@@ -76,9 +81,19 @@
     color: var(--green-menthe-sun-373-moon-652);
 }
 #tutoriel img#tutoriel-exemple {
-  border-top: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
-  border-bottom: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
+    border-top: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
+    border-bottom: 12px solid var(--light-accent-green-archipel-sun-391-hover, #009FA7);
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
 }
+@media (max-width: 992px) {
+    #tutoriel img#illustration-personne-code {
+        display: none;
+    }
+}
+
 .u-center {
   text-align: center;
 }
@@ -89,17 +104,18 @@
 #statistiques .fr-col {
     box-shadow: inset 0 -.25rem 0 0 var(--border-default-green-menthe);
 }
-#statistiques .fr-col-md-4 {
-  flex: 0 0 25%;
-  max-width: 25%;
-  width: 25%;
-}
 #statistiques big {
     font-size: xx-large;
     font-weight: bold;
     color: var(--border-default-green-menthe);
     display: block;
     padding-top: 1rem;
+}
+img#location-france {
+    display: block;
+    max-width: 100%;
+    width: auto;
+    height: auto;
 }
 
 .umap-help-box {
