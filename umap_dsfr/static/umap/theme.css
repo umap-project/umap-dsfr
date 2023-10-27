@@ -118,9 +118,6 @@ img#location-france {
     height: auto;
 }
 
-.umap-help-box {
-    display: none; /* TODISCUSS */
-}
 .map_fragment {
     height: 250px;
 }
