@@ -1,5 +1,5 @@
 {% load umap_tags umap_tags i18n %}
-<div class="fr-grid-row fr-grid-row--gutters">
+<div class="fr-grid-row fr-grid-row--gutters fr-mb-2w">
   {% for map_inst in maps %}
     <div class="fr-col fr-col-12 fr-col-md-4">
       <div class="fr-card">
@@ -22,7 +22,7 @@
 </div>
 {% if maps.has_next %}
   <div class="ajax-paginated">
-    <p class="fr-p-4w btns-group--center">
+    <p class="fr-pb-4w btns-group--center">
       <a class="fr-btn fr-btn--lg fr-btn--secondary more_button"
          href="?{% paginate_querystring maps.next_page_number %}">{% trans "More" %}</a>
     </p>
