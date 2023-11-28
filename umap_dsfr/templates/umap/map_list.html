@@ -2,13 +2,13 @@
 <div class="fr-grid-row fr-grid-row--gutters">
   {% for map_inst in maps %}
     <div class="fr-col fr-col-12 fr-col-md-4">
-      <div class="fr-card fr-enlarge-link">
+      <div class="fr-card">
         <div class="fr-card__body">
           <div class="fr-card__content">
             <h3 class="fr-card__title">
               <a href="{{ map_inst.get_absolute_url }}">{{ map_inst.name }}</a>
               {% if map_inst.owner %}
-                <em>{% trans "by" %} {{ map_inst.owner }}</em>
+                <em>{% trans "by" %} <a href="{{ map_inst.owner.get_url }}">{{ map_inst.owner }}</a></em>
               {% endif %}
             </h3>
           </div>

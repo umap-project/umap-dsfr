@@ -1,16 +1,14 @@
 {% extends "umap/content.html" %}
-{% load i18n %}
+
 {% block maincontent %}
   <main role="main" class="fr-container-fluid">
-    <div class="fr-container">
-      <h2 class="section">Les cartes de {{ current_user }}</h2>
-      <div class="map_list row">
-        {% if maps %}
-          {% include "umap/map_list.html" %}
-        {% else %}
-          <div>{{ current_user }} n’a pas encore de cartes.</div>
-        {% endif %}
-      </div>
+    <div class="fr-container fr-pb-2w">
+      <h2 class="fr-m-4w fr-pt-2w section">Les cartes de {{ current_user }}</h2>
+      {% if maps %}
+        {% include "umap/map_list.html" %}
+      {% else %}
+        <div><p>{{ current_user }} n’a pas encore de cartes.</p></div>
+      {% endif %}
     </div>
   </main>
 {% endblock maincontent %}
