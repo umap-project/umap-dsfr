@@ -122,6 +122,18 @@ img#location-france {
     height: 250px;
 }
 
+#join {
+    background: #E6EEFE;
+    margin-bottom: 0.75rem;
+}
+#join img {
+    float: left;
+    margin-right: 2rem;
+}
+#join aside {
+    border-left: 2px solid #3558A2;
+}
+
 /* ****************************** */
 /* Overriding some intrusive DSFR */
 /* ****************************** */
