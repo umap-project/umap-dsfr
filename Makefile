@@ -27,7 +27,6 @@ dsfr-lite: ## Copy DSFR pertinent files and purge the huge CSS
 	mkdir -p umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/fonts umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/icons umap_dsfr/static/umap/dsfr-lite
-	cp -R node_modules/@gouvfr/dsfr/dist/favicon umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/artwork/pictograms umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/dsfr.module.js umap_dsfr/static/umap/dsfr-lite
 	cp -R node_modules/@gouvfr/dsfr/dist/dsfr.module.js.map umap_dsfr/static/umap/dsfr-lite
