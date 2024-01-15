@@ -14,7 +14,7 @@ class MonComptePro(OpenIdConnectAuth):
     ]
 
     def auth_allowed(self, response, details):
-        if response["is_collectivite_territoriale"] or response["is_service_public"]:
+        if response.get("is_commune") or response.get("is_service_public"):
             # TODO should we check for is_external ?
             return True
         return False
