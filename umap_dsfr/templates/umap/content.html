@@ -1,7 +1,6 @@
 {% extends "base.html" %}
-{% load umap_tags compress i18n static %}
+{% load umap_tags i18n static %}
 {% block extra_head %}
-  {% compress css %}
     <link rel="stylesheet"
           href="{{ STATIC_URL }}umap/vendors/leaflet/leaflet.css" />
     <link rel="stylesheet"
@@ -13,7 +12,7 @@
     <link rel="stylesheet"
           href="{{ STATIC_URL }}umap/vendors/minimap/Control.MiniMap.css" />
     <link rel="stylesheet"
-          href="{{ STATIC_URL }}umap/vendors/contextmenu/leaflet.contextmenu.css" />
+          href="{{ STATIC_URL }}umap/vendors/contextmenu/leaflet.contextmenu.min.css" />
     <link rel="stylesheet"
           href="{{ STATIC_URL }}umap/vendors/toolbar/leaflet.toolbar.css" />
     <link rel="stylesheet"
@@ -21,12 +20,11 @@
     <link rel="stylesheet"
           href="{{ STATIC_URL }}umap/vendors/fullscreen/leaflet.fullscreen.css" />
     <link rel="stylesheet"
-          href="{{ STATIC_URL }}umap/vendors/locatecontrol/L.Control.Locate.css" />
+          href="{{ STATIC_URL }}umap/vendors/locatecontrol/L.Control.Locate.min.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/dsfr.min.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/icons.min.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}umap/map.css" />
     <link rel="stylesheet" href="{{ STATIC_URL }}umap/theme.css" />
-  {% endcompress css %}
   {% umap_js %}
 {% endblock extra_head %}
 {% block header %}
@@ -45,35 +43,25 @@
   <script src="{% static "umap/dsfr-lite/dsfr.module.js" %}" type="module"></script>
   <script src="{% static "umap/theme.js" %}" type="module"></script>
   <script type="text/javascript">
-    !(function () {
-      const getMore = function (e) {
+    window.addEventListener('DOMContentLoaded', event => {
+      const ui = new U.UI(document.querySelector('header'))
+      const server = new U.ServerRequest(ui)
+      const getMore = async function (e) {
         L.DomEvent.stop(e)
-        const ui = new L.U.UI(document.querySelector('header'))
-        const xhr = new L.U.Xhr(ui)
-        xhr._ajax({
-          uri: this.href,
-          verb: 'GET',
-          callback: function (data) {
-            const container = this.parentElement.parentElement
-            container.innerHTML = data
-            Array.prototype.forEach.call(
-              container.querySelectorAll('script'),
-              function (item) {
-                eval(item.firstChild.textContent)
-              }
-            )
-            const more = document.querySelector('.more_button')
-            if (more) {
-              L.DomEvent.on(more, 'click', getMore, more)
-            }
-          },
-          context: this,
-        })
+        const [{html}, response, error] = await server.get(this.href)
+        if (!error) {
+          const container = this.parentNode
+          container.innerHTML = html
+          const more = document.querySelector('.more_button')
+          if (more) {
+            L.DomEvent.on(more, 'click', getMore, more)
+          }
+        }
       }
       const more = document.querySelector('.more_button')
       if (more) {
         L.DomEvent.on(more, 'click', getMore, more)
       }
-    })(this)
+    })
   </script>
 {% endblock bottom_js %}
