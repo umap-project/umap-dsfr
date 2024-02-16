@@ -134,6 +134,29 @@ img#location-france {
     border-left: 2px solid #3558A2;
 }
 
+.table-wrapper table a:not(.icon-link) {
+    text-decoration: none;
+}
+.table-wrapper .icon-link[href],
+.pagination a {
+    text-decoration: none;
+    background-image: none;
+}
+.table-header form input,
+.table-header .button-download {
+    color: rgb(0, 0, 145);
+    border-color: rgb(0, 0, 145);
+    background-image: none;
+}
+.table-header form input[type="search"] {
+    height: var(--icon-size);
+}
+.table-wrapper table a,
+.table-wrapper table thead tr th,
+.table-wrapper table th[scope="row"] {
+    color: rgb(0, 0, 145);
+}
+
 /* ****************************** */
 /* Overriding some intrusive DSFR */
 /* ****************************** */

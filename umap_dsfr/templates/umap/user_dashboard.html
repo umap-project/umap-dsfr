@@ -7,7 +7,26 @@
   {% trans "Search my maps" as placeholder %}
   <div class="fr-container">
     <h2 class="fr-m-4w fr-pt-6w fr-tile__body">{% trans "Mes cartes" %}</h2>
-    {% include "umap/search_bar.html" with action=request.get_full_path placeholder=placeholder %}
+    <div class="table-header">
+      <form action="{{ request.get_full_path }}" method="get">
+        <span class="fr-search-bar fr-search-bar--lg">
+          <label class="fr-label" for="q">Recherche</label>
+          <input id="q" class="fr-input" name="q" type="search"
+                 placeholder="Recherche"
+                 value="{{ request.GET.q|default:"" }}" />
+          <button class="fr-btn">Rechercher</button>
+        </span>
+      </form>
+      {% if maps.object_list|length > 1 %}
+        <a href="{% url 'user_download' %}?{% spaceless %}
+        {% for map_inst in maps %}map_id={{ map_inst.pk }}{% if not forloop.last %}&{% endif %}{% endfor %}
+        {% endspaceless %}" class="button button-download"
+          >{% blocktranslate with count=maps.object_list|length trimmed %}
+            Download {{ count }} maps
+          {% endblocktranslate %}
+        </a>
+      {% endif %}
+    </div>
   </div>
   <div class="fr-container">
     {% if maps %}
@@ -25,3 +44,26 @@
     {% endif %}
   </div>
 {% endblock maincontent %}
+
+{% block bottom_js %}
+  {{ block.super }}
+  <script type="text/javascript">
+    !(function () {
+      const CACHE = {}
+      for (const mapOpener of document.querySelectorAll("button.map-opener")) {
+        mapOpener.addEventListener('click', (event) => {
+          const button = event.target.closest('button')
+          button.nextElementSibling.showModal()
+          const mapId = button.dataset.mapId
+          if (!document.querySelector(`#${mapId}_target`).hasChildNodes()) {
+            const previewSettings = JSON.parse(document.getElementById(mapId).textContent)
+            const map = new U.Map(`${mapId}_target`, previewSettings)
+            CACHE[mapId] = map
+          } else {
+            CACHE[mapId].invalidateSize()
+          }
+        })
+      }
+    })()
+  </script>
+{% endblock bottom_js %}
