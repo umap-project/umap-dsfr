@@ -83,7 +83,7 @@
 
 /* See https://css-tricks.com/responsive-iframes/ */
 [style*="--aspect-ratio"] > :first-child {
-  width: 100%;
+  width: 95%;
 }
 [style*="--aspect-ratio"] > img {
   height: auto;
