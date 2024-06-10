@@ -13,11 +13,11 @@
     "dsfr"
   ],
   "author": "Yohan Boniface",
-  "license": "WTFPL",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/umap-project/umap-dsfr/issues"
   },
-  "homepage": "http://wiki.openstreetmap.org/wiki/UMap",
+  "homepage": "https://umap-project.org/",
   "dependencies": {
     "countup.js": "2.6.2",
     "@gouvfr/dsfr": "1.9.3",
