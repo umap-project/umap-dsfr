@@ -1,0 +1,11 @@
+{% extends "umap/content.html" %}
+{% load umap_tags i18n static %}
+{% block maincontent %}
+  <main role="main" id="blog-article" class="fr-container-fluid">
+    <div class="fr-container">
+      <div class="fr-grid-row fr-mx-sm-2w fr-mx-md-6w fr-mx-lg-10w fr-mb-4w">
+        {{ blog_article.html|safe }}
+      </div>
+    </div>
+  </main>
+{% endblock maincontent %}

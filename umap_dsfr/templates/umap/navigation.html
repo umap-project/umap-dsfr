@@ -99,6 +99,21 @@
                target="_blank"
                rel="noopener">Documentation</a>
           </li>
+          <li class="fr-nav__item">
+            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-blog">Blog</button>
+            <div class="fr-collapse fr-menu" id="menu-blog">
+              <ul class="fr-menu__list">
+                {% for article in blog_articles %}
+                  <li>
+                    <a class="fr-nav__link" href="{{ article.url }}" target="_self">{{ article.title }}</a>
+                  </li>
+                {% endfor %}
+                <li>
+                  <a class="fr-nav__link fr-icon-rss-line" href="{% url 'blog_feed' %}" target="_self"> Flux RSS</a>
+                </li>
+              </ul>
+            </div>
+          </li>
         </ul>
       </nav>
     </div>

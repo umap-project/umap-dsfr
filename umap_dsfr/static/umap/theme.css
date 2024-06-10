@@ -50,7 +50,8 @@
   border: 1px solid var(--border-default-grey);
 }
 
-#intro {
+#intro,
+#blog-latest {
     background-color: rgb(233, 250, 252);
 }
 @media (max-width: 992px) {
@@ -171,6 +172,13 @@ img#location-france {
 .table-wrapper table thead tr th,
 .table-wrapper table th[scope="row"] {
     color: rgb(0, 0, 145);
+}
+
+#blog-article h1 {
+    margin-top: 3rem;
+}
+#blog-article .fr-alert:has(+ p) {
+    margin-bottom: 1rem;
 }
 
 /* ****************************** */
