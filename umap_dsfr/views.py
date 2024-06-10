@@ -53,7 +53,7 @@ class Article:
 
 class BlogFeed(Feed):
     title = "Actualités uMap (ANCT)"
-    link = "/"
+    link = "https://umap.dev.incubateur.anct.gouv.fr/"
     description = "Derniers articles publiés sur le blog de uMap pour l’ANCT."
 
     def items(self):
@@ -63,7 +63,8 @@ class BlogFeed(Feed):
         return item.title
 
     def item_description(self, item):
-        return item.html
+        # Deal with relative image/links.
+        return item.html.replace('="/static', f'="{self.link}static')
 
     def item_link(self, item):
         return reverse("blog_article", args=[item.slug])
