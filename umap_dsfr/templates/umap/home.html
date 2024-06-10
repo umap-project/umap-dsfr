@@ -14,9 +14,9 @@
               <a class="fr-btn fr-mr-2w fr-mb-2w" href="{% url "map_new" %}">
                 <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
               </a>
-              <a class="fr-btn fr-btn--secondary" href="https://formulaires.incubateur.anct.gouv.fr/doc/eD75eJLqWNqq/table/5/reponse/form/70" target="_blank">
-                Participer à un prochain webinaire
-              </a>
+              <a class="fr-btn fr-btn--secondary"
+                 href="https://formulaires.incubateur.anct.gouv.fr/doc/eD75eJLqWNqq/table/5/reponse/form/70"
+                 target="_blank">Participer à un prochain webinaire</a>
             </p>
           </div>
           <img class="fr-m-4w"
@@ -32,11 +32,7 @@
         <div id="statistiques"
              class="fr-grid-row fr-grid-row--gutters fr-grid-row--center fr-pt-4w fr-pb-4w">
           <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
-            <img
-              src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}"
-              alt="Avatar pictogram"
-              width="100px"
-              height="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/digital/avatar.svg" %}" alt="Avatar pictogram" width="100px" height="100px">
             <p>
               <big>121453</big>
               <br>
@@ -44,11 +40,7 @@
             </p>
           </div>
           <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
-            <img
-              src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}"
-              alt="Map pictogram"
-              width="100px"
-              height="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/map.svg" %}" alt="Map pictogram" width="100px" height="100px">
             <p>
               <big>1165018</big>
               <br>
@@ -56,11 +48,7 @@
             </p>
           </div>
           <div class="fr-col fr-col-md-3 fr-col-sm-5 fr-col-11 fr-tile__body">
-            <img
-              src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}"
-              alt="Location France pictogram"
-              width="100px"
-              height="100px">
+            <img src="{% static "umap/dsfr-lite/pictograms/map/location-france.svg" %}" alt="Location France pictogram" width="100px" height="100px">
             <p>
               <big>7565</big>
               <br>
@@ -71,19 +59,9 @@
         <h2 class="fr-m-2w fr-pt-4w fr-tile__body">De nombreuses collectivités et organismes publics utilisent uMap</h2>
         <div class="fr-tile__body">
           <picture>
-            <source
-              media="(min-width: 576px)"
-              srcset="{% static "umap/img/logos-collterr.png" %}">
-            <img
-              id="location-france"
-              src="{% static "umap/img/logos-collterr-mobile.png" %}"
-              alt="Logos des utilisateurs de uMap"
-              width="591px"
-              height="500px"
-              loading="lazy">
+            <source media="(min-width: 576px)" srcset="{% static "umap/img/logos-collterr.png" %}">
+            <img id="location-france" src="{% static "umap/img/logos-collterr-mobile.png" %}" alt="Logos des utilisateurs de uMap" width="591px" height="500px" loading="lazy">
           </picture>
-
-
         </div>
       </div>
     </div>
@@ -117,28 +95,25 @@
             </p>
           </div>
           <div class="fr-col fr-col-12 fr-col-md-6" style="--aspect-ratio: 185/100;">
-            <iframe
-              title="Exemple de cartes uMap"
-              width="560"
-              height="315"
-              src="https://tube.numerique.gouv.fr/videos/embed/7e54bb5d-d551-4791-a2ba-958d4d5e9a4e"
-              frameborder="0"
-              allowfullscreen=""
-              sandbox="allow-same-origin allow-scripts allow-popups"
-              ></iframe>
+            <iframe title="Exemple de cartes uMap"
+                    width="560"
+                    height="315"
+                    src="https://tube.numerique.gouv.fr/videos/embed/7e54bb5d-d551-4791-a2ba-958d4d5e9a4e"
+                    frameborder="0"
+                    allowfullscreen=""
+                    sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
           </div>
         </div>
         <div class="fr-grid-row fr-grid-row--gutters fr-mt-12w fr-mb-8w responsive-columns-swap">
-          <div class="fr-col fr-col-12 fr-col-md-6 u-center" style="--aspect-ratio: 185/100;">
-            <iframe
-              title="Démonstration de uMap ANCT"
-              width="560"
-              height="315"
-              src="https://tube.numerique.gouv.fr/videos/embed/ea5438ee-bfe0-40ea-980c-9a8dec2d8419"
-              frameborder="0"
-              allowfullscreen=""
-              sandbox="allow-same-origin allow-scripts allow-popups"
-              ></iframe>
+          <div class="fr-col fr-col-12 fr-col-md-6 u-center"
+               style="--aspect-ratio: 185/100">
+            <iframe title="Démonstration de uMap ANCT"
+                    width="560"
+                    height="315"
+                    src="https://tube.numerique.gouv.fr/videos/embed/ea5438ee-bfe0-40ea-980c-9a8dec2d8419"
+                    frameborder="0"
+                    allowfullscreen=""
+                    sandbox="allow-same-origin allow-scripts allow-popups"></iframe>
           </div>
           <div class="fr-col fr-col-12 fr-col-md-6">
             <h2 class="fr-mb-4w">Utilisez les fonctionnalités avancées de uMap</h2>
@@ -149,7 +124,8 @@
               <li>Utiliser des données distantes</li>
             </ul>
             <p class="fr-mt-4w">
-              <a class="fr-btn fr-btn--secondary" href="https://discover.umap-project.org/fr/">
+              <a class="fr-btn fr-btn--secondary"
+                 href="https://discover.umap-project.org/fr/">
                 <span class="fr-icon-git-repository-line fr-mr-1w" aria-hidden="true"></span> Accéder à la documentation →
               </a>
             </p>
@@ -182,46 +158,49 @@
               </div>
               <div class="fr-card__header">
                 <div class="fr-card__img">
-                    <img class="fr-responsive-img" src="{{ article.image }}" alt="{{ article.image_alt }}" />
+                  <img class="fr-responsive-img"
+                       src="{{ article.image }}"
+                       alt="{{ article.image_alt }}" />
                 </div>
               </div>
             </div>
           {% endfor %}
-      </div>
-    </div>
-    <div id="join">
-      <div class="fr-container">
-        <div class="fr-grid-row fr-grid-row--gutters fr-mt-8w">
-          <div class="fr-col fr-col-12 fr-col-md-8">
-            <h2 class="fr-pt-4w fr-mb-1w fr-text--lead">Recevez tous les mois les actualités de uMap</h2>
-            <p>
-              Nouveautés, tutoriels, astuces et cas pratiques<br>
-              <a class="fr-btn fr-mt-1w"
-                href="https://491dc778.sibforms.com/serve/MUIFAJnGfRXmhpbKJ5HcOyQ5clgILHnuPh2dMNaS80_Vsqm_bmeD9oBbo76kP4hrPwwoAVxt5tKkgFSa8B_hhLmmeNySdoGvYtUDcS5pM4cJCKeSsrQtfEo2bbB-_iq36k5q13fzFuIqimRSGrc0YgnWBN6K4LyAIbuAO3KiEBhSTll5Af2FWhFHepryXXC_c52Gk2FCvUOaWnTx"
-                target="_blank"
-                rel="noopener">S’inscrire à l’infolettre uMap</a>
-            </p>
-            <h2 class="fr-pt-4w fr-mb-1w fr-text--lead">Rejoignez la communauté des utilisateurs</h2>
-            <img src="{{ STATIC_URL }}umap/img/tchap-logo.svg">
-            <p>
-              Discussions et demandes d’aide autour d’uMap<br>
-              <a
-                href="https://tchap.gouv.fr/#/room/!uPnJvxCrKXSNzYhJXe:agent.dev-durable.tchap.gouv.fr?via=agent.dinum.tchap.gouv.fr&via=agent.dev-durable.tchap.gouv.fr&via=agent.education.tchap.gouv.fr"
-                target="_blank"
-               rel="noopener">accédez au canal Tchap dédié</a>.
-            </p>
-          </div>
-          <aside class="fr-col fr-col-12 fr-col-md-4 fr-mb-4w fr-mt-4w fr-pl-6w">
-            <h2 class="fr-text--lead">Nous contacter</h2>
-            <p>
-              L’équipe : <a href="mailto:contact-umap@anct.gouv.fr">contact-umap@anct.gouv.fr</a>
-            </p>
-            <p>
-              Le support : <a href="mailto:umap@anct.beta.gouv.fr">umap@anct.beta.gouv.fr</a>
-            </p>
-          </aside>
         </div>
       </div>
-    </div>
-  </main>
-{% endblock maincontent %}
+      <div id="join">
+        <div class="fr-container">
+          <div class="fr-grid-row fr-grid-row--gutters fr-mt-8w">
+            <div class="fr-col fr-col-12 fr-col-md-8">
+              <h2 class="fr-pt-4w fr-mb-1w fr-text--lead">Recevez tous les mois les actualités de uMap</h2>
+              <p>
+                Nouveautés, tutoriels, astuces et cas pratiques
+                <br>
+                <a class="fr-btn fr-mt-1w"
+                   href="https://491dc778.sibforms.com/serve/MUIFAJnGfRXmhpbKJ5HcOyQ5clgILHnuPh2dMNaS80_Vsqm_bmeD9oBbo76kP4hrPwwoAVxt5tKkgFSa8B_hhLmmeNySdoGvYtUDcS5pM4cJCKeSsrQtfEo2bbB-_iq36k5q13fzFuIqimRSGrc0YgnWBN6K4LyAIbuAO3KiEBhSTll5Af2FWhFHepryXXC_c52Gk2FCvUOaWnTx"
+                   target="_blank"
+                   rel="noopener">S’inscrire à l’infolettre uMap</a>
+              </p>
+              <h2 class="fr-pt-4w fr-mb-1w fr-text--lead">Rejoignez la communauté des utilisateurs</h2>
+              <img src="{{ STATIC_URL }}umap/img/tchap-logo.svg">
+              <p>
+                Discussions et demandes d’aide autour d’uMap
+                <br>
+                <a href="https://tchap.gouv.fr/#/room/!uPnJvxCrKXSNzYhJXe:agent.dev-durable.tchap.gouv.fr?via=agent.dinum.tchap.gouv.fr&via=agent.dev-durable.tchap.gouv.fr&via=agent.education.tchap.gouv.fr"
+                   target="_blank"
+                   rel="noopener">accédez au canal Tchap dédié</a>.
+              </p>
+            </div>
+            <aside class="fr-col fr-col-12 fr-col-md-4 fr-mb-4w fr-mt-4w fr-pl-6w">
+              <h2 class="fr-text--lead">Nous contacter</h2>
+              <p>
+                L’équipe : <a href="mailto:contact-umap@anct.gouv.fr">contact-umap@anct.gouv.fr</a>
+              </p>
+              <p>
+                Le support : <a href="mailto:umap@anct.beta.gouv.fr">umap@anct.beta.gouv.fr</a>
+              </p>
+            </aside>
+          </div>
+        </div>
+      </div>
+    </main>
+  {% endblock maincontent %}

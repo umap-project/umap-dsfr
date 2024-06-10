@@ -40,14 +40,14 @@
                 <li>
                   {% url "user_dashboard" as url %}
                   <a class="fr-btn fr-icon-account-fill"
-                     href="{{ url}}"
+                     href="{{ url }}"
                      {% if request.path == url %}aria-current="page"{% endif %}>Mes cartes</a>
                 </li>
                 <li>
                   {% with user.get_stars_url as url %}
-                  <a class="fr-btn fr-icon-star-s-fill"
-                     href="{{ url }}"
-                     {% if request.path == url %}aria-current="page"{% endif %}>Mes favoris</a>
+                    <a class="fr-btn fr-icon-star-s-fill"
+                       href="{{ url }}"
+                       {% if request.path == url %}aria-current="page"{% endif %}>Mes favoris</a>
                   {% endwith %}
                 </li>
               {% endif %}
@@ -87,11 +87,15 @@
         <ul class="fr-nav__list">
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
             {% url "home" as url %}
-            <a class="fr-nav__link" href="{{ url }}" {% if request.path == url %}aria-current="page"{% endif %}>Accueil</a>
+            <a class="fr-nav__link"
+               href="{{ url }}"
+               {% if request.path == url %}aria-current="page"{% endif %}>Accueil</a>
           </li>
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
             {% url "search" as url %}
-            <a class="fr-nav__link" href="{{ url }}" {% if request.path == url %}aria-current="page"{% endif %}>Explorer les cartes</a>
+            <a class="fr-nav__link"
+               href="{{ url }}"
+               {% if request.path == url %}aria-current="page"{% endif %}>Explorer les cartes</a>
           </li>
           <li class="fr-nav__item" data-fr-js-navigation-item="true">
             <a class="fr-nav__link"
@@ -109,7 +113,9 @@
                   </li>
                 {% endfor %}
                 <li>
-                  <a class="fr-nav__link fr-icon-rss-line" href="{% url 'blog_feed' %}" target="_self"> Flux RSS</a>
+                  <a class="fr-nav__link fr-icon-rss-line"
+                     href="{% url 'blog_feed' %}"
+                     target="_self">Flux RSS</a>
                 </li>
               </ul>
             </div>

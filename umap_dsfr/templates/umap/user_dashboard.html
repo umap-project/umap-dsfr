@@ -11,17 +11,19 @@
       <form action="{{ request.get_full_path }}" method="get">
         <span class="fr-search-bar fr-search-bar--lg">
           <label class="fr-label" for="q">Recherche</label>
-          <input id="q" class="fr-input" name="q" type="search"
+          <input id="q"
+                 class="fr-input"
+                 name="q"
+                 type="search"
                  placeholder="Recherche"
                  value="{{ request.GET.q|default:"" }}" />
           <button class="fr-btn">Rechercher</button>
         </span>
       </form>
       {% if maps.object_list|length > 1 %}
-        <a href="{% url 'user_download' %}?{% spaceless %}
-        {% for map_inst in maps %}map_id={{ map_inst.pk }}{% if not forloop.last %}&{% endif %}{% endfor %}
-        {% endspaceless %}" class="button button-download"
-          >{% blocktranslate with count=maps.object_list|length trimmed %}
+        <a href="{% url 'user_download' %}?{% spaceless %} {% for map_inst in maps %}map_id={{ map_inst.pk }}{% if not forloop.last %}&{% endif %}{% endfor %} {% endspaceless %}"
+           class="button button-download">
+          {% blocktranslate with count=maps.object_list|length trimmed %}
             Download {{ count }} maps
           {% endblocktranslate %}
         </a>
@@ -34,7 +36,6 @@
     {% else %}
       <div>
         <p>Vous n’avez pas encore de carte enregistrée dans votre espace.</p>
-
         <p class="fr-mt-4w">
           <a class="fr-btn" href="{% url "map_new" %}">
             <span class="fr-icon-add-line fr-mr-1w" aria-hidden="true"></span> Créer une carte
@@ -44,7 +45,6 @@
     {% endif %}
   </div>
 {% endblock maincontent %}
-
 {% block bottom_js %}
   {{ block.super }}
   <script type="text/javascript">
