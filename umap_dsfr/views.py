@@ -3,6 +3,7 @@ from pathlib import Path
 import frontmatter
 import mistune
 from dataclasses import dataclass
+from django.conf import settings
 from django.contrib.syndication.views import Feed
 from django.http import HttpResponse
 from django.template import loader
@@ -53,7 +54,7 @@ class Article:
 
 class BlogFeed(Feed):
     title = "Actualités uMap (ANCT)"
-    link = "https://umap.dev.incubateur.anct.gouv.fr/"
+    link = settings.SITE_URL
     description = "Derniers articles publiés sur le blog de uMap pour l’ANCT."
 
     def items(self):
@@ -67,7 +68,7 @@ class BlogFeed(Feed):
         return item.html.replace('="/static', f'="{self.link}static')
 
     def item_link(self, item):
-        return reverse("blog_article", args=[item.slug])
+        return self.link + reverse("blog_article", args=[item.slug])
 
 
 class BlogContextMixin:
