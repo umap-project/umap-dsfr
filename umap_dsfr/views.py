@@ -65,7 +65,7 @@ class BlogFeed(Feed):
 
     def item_description(self, item):
         # Deal with relative image/links.
-        return item.html.replace('="/static', f'="{self.link}static')
+        return item.html.replace('="/static', f'="{self.link}/static')
 
     def item_link(self, item):
         return self.link + reverse("blog_article", args=[item.slug])
