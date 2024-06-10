@@ -17,6 +17,11 @@ In your local settings, add the `umap_dsfr` app:
         "umap_dsfr",
     ) + INSTALLED_APPS
 
+
+Set the custom url conf:
+
+    ROOT_URLCONF = "umap_dsfr.urls"
+
 And set the correct number of results per search:
 
     UMAP_MAPS_PER_SEARCH = 24
