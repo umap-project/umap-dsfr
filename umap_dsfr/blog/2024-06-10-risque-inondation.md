@@ -115,7 +115,7 @@ Cela me donne **de bonnes idées pour notre observatoire** !
 <div class="fr-alert fr-alert--info">
 <h4 class="fr-alert__title">🔆 Tuto minute : pour appeler un flux dans uMap :</h4>
 <figure>
-<img src="/static/umap/img/blog/memoire-inondations.jpg" class="fr-responsive-img" alt="Mémoire des inondations en vallées des gaves.">
+<img src="/static/umap/img/blog/flux-umap.gif" class="fr-responsive-img" alt="Exemple animé pour copier un flux dans uMap.">
 <figcaption>
 
 Sur cet exemple le lien vers le flux des arbres remarquables est copié de [data.gouv.fr](https://www.data.gouv.fr/fr/datasets/arbres-remarquables-metz/) et collé dans l’URL à renseigner. Il est préférable de choisir l’URL stable. La carte se met automatiquement à jour, voir [des exemples plus détaillés dans la documentation](https://discover.umap-project.org/fr/tutorials/10-embed-remote-data/).
