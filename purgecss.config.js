@@ -12,6 +12,9 @@ module.exports = {
 		"fr-alert--info", // For blog posts.
 		"fr-alert__title", // For blog posts.
 		"fr-alert--sm", // For blog posts.
+		"fr-link", // For blog posts.
+		"fr-icon-arrow-right-line", // For blog posts.
+		"fr-link--icon-right", // For blog posts.
 	],
 	output: "umap_dsfr/static/umap/dsfr-lite/",
 };

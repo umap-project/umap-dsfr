@@ -26,10 +26,10 @@ class Article:
     def __post_init__(self):
         self.title = self.item["title"]
         self.date = self.item["date"]
-        self.description = self.item["description"]
-        self.image = self.item["image"]
-        self.image_alt = self.item["image_alt"]
-        self.tags = self.item["tags"]
+        self.description = self.item.get("description")
+        self.image = self.item.get("image")
+        self.image_alt = self.item.get("image_alt")
+        self.tags = self.item.get("tags", [])
         self.slug = slugify(self.title)
         self.url = reverse("blog_article", args=[self.slug])
 
