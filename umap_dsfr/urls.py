@@ -2,7 +2,7 @@ from django.conf.urls.i18n import i18n_patterns
 from django.urls import path, re_path
 from umap.urls import urlpatterns
 
-from .views import DSFRHome, DSFRSearch, blog_article, BlogFeed
+from .views import DSFRHome, DSFRSearch, blog, infolettres, BlogFeed
 
 
 urlpatterns = (
@@ -13,6 +13,7 @@ urlpatterns = (
     + urlpatterns
     + [
         path("blog/feed/", BlogFeed(), name="blog_feed"),
-        path("blog/<slug:slug>/", blog_article, name="blog_article"),
+        path("blog/<slug:slug>/", blog, name="blog"),
+        path("infolettres/<slug:slug>/", infolettres, name="infolettres"),
     ]
 )

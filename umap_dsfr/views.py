@@ -15,6 +15,7 @@ from .utils import each_file_from
 
 md = mistune.create_markdown(escape=False)
 BLOG_SRC = Path(__file__).parent.resolve() / "blog"
+INFOLETTRES_SRC = Path(__file__).parent.resolve() / "infolettres"
 
 
 @dataclass
@@ -22,6 +23,7 @@ class Article:
     item: dict
     markdown: str
     html: str
+    kind: str
 
     def __post_init__(self):
         self.title = self.item["title"]
@@ -31,7 +33,7 @@ class Article:
         self.image_alt = self.item.get("image_alt")
         self.tags = self.item.get("tags", [])
         self.slug = slugify(self.title)
-        self.url = reverse("blog_article", args=[self.slug])
+        self.url = reverse(self.kind, args=[self.slug])
 
     def __eq__(self, other):
         return self.slug == other.slug
@@ -45,9 +47,10 @@ class Article:
     def all(source: Path):
         items = []
         for markdown_file in each_file_from(source, pattern="*.md"):
+            kind = markdown_file.parts[-2]
             item = frontmatter.load(markdown_file)
             html = md(item.content)
-            page = Article(item=item, markdown=item.content, html=html)
+            page = Article(item=item, markdown=item.content, html=html, kind=kind)
             items.append(page)
         return sorted(items, reverse=True)
 
@@ -71,25 +74,42 @@ class BlogFeed(Feed):
         return self.link + reverse("blog_article", args=[item.slug])
 
 
-class BlogContextMixin:
+class MenuContextMixin:
+    # Should probably move to a dedicated context processor at some point.
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
-        context["blog_articles"] = Article.all(BLOG_SRC)
+        context["blog"] = Article.all(BLOG_SRC)
+        context["infolettres"] = Article.all(INFOLETTRES_SRC)
         return context
 
 
-class DSFRHome(BlogContextMixin, Home): ...
+class DSFRHome(MenuContextMixin, Home): ...
 
 
-class DSFRSearch(BlogContextMixin, Search): ...
+class DSFRSearch(MenuContextMixin, Search): ...
 
 
-def blog_article(request, slug):
+def blog(request, slug):
     template = loader.get_template("umap/article.html")
-    blog_articles = Article.all(BLOG_SRC)
-    blog_article = [article for article in blog_articles if article.slug == slug].pop()
+    blog = Article.all(BLOG_SRC)
+    infolettres = Article.all(INFOLETTRES_SRC)
+    article = [item for item in blog if item.slug == slug].pop()
     context = {
-        "blog_articles": blog_articles,
-        "blog_article": blog_article,
+        "blog": blog,
+        "infolettres": infolettres,
+        "article": article,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def infolettres(request, slug):
+    template = loader.get_template("umap/article.html")
+    infolettres = Article.all(INFOLETTRES_SRC)
+    blog = Article.all(BLOG_SRC)
+    article = [item for item in infolettres if item.slug == slug].pop()
+    context = {
+        "infolettres": infolettres,
+        "blog": blog,
+        "article": article,
     }
     return HttpResponse(template.render(context, request))

@@ -5,9 +5,11 @@ tags:
     - Infolettre
 ---
 
-Voici votre nouvelle lettre d’information uMap à destination des agents publics pour suivre les nouveautés, les bonnes pratiques et découvrir des astuces. Vous recherchez un langage universel pour guider vos usagers ? Vous avez besoin de visualiser le travail de vos équipes, l’avancée d’un projet ? Une carte en ligne sera facilement comprise et uMap s’adapte à tous les usages, débutants comme experts.
+Voici votre nouvelle lettre d’information uMap à destination des agents publics pour suivre les nouveautés, les bonnes pratiques et découvrir des astuces. Vous recherchez un langage universel pour guider vos usagers ? Vous avez besoin de visualiser le travail de vos équipes, l’avancée d’un projet ? Une carte en ligne sera facilement comprise et uMap s’adapte à tous les usages, débutants comme experts. […]
 
+<p class="fr-mb-8w">
 <a class="fr-link fr-icon-arrow-right-line fr-link--icon-right" href="https://sh1.sendinblue.com/act2w8skn9pfe.html">Consulter la totalité de l’infolettre</a>
+</p>
 
 <div class="fr-alert fr-alert--info">
 

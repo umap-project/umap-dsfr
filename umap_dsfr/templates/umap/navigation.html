@@ -107,7 +107,7 @@
             <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-blog">Blog</button>
             <div class="fr-collapse fr-menu" id="menu-blog">
               <ul class="fr-menu__list">
-                {% for article in blog_articles %}
+                {% for article in blog %}
                   <li>
                     <a class="fr-nav__link" href="{{ article.url }}" target="_self">{{ article.title }}</a>
                   </li>
@@ -115,7 +115,24 @@
                 <li>
                   <a class="fr-nav__link fr-icon-rss-line"
                      href="{% url 'blog_feed' %}"
-                     target="_self">Flux RSS</a>
+                     target="_self"> Flux RSS</a>
+                </li>
+              </ul>
+            </div>
+          </li>
+          <li class="fr-nav__item">
+            <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-infolettres">Infolettres</button>
+            <div class="fr-collapse fr-menu" id="menu-infolettres">
+              <ul class="fr-menu__list">
+                {% for infolettre in infolettres %}
+                  <li>
+                    <a class="fr-nav__link" href="{{ infolettre.url }}" target="_self">{{ infolettre.title }}</a>
+                  </li>
+                {% endfor %}
+                <li>
+                  <a class="fr-nav__link fr-icon-send-plane-fill"
+                     href="https://491dc778.sibforms.com/serve/MUIFAJnGfRXmhpbKJ5HcOyQ5clgILHnuPh2dMNaS80_Vsqm_bmeD9oBbo76kP4hrPwwoAVxt5tKkgFSa8B_hhLmmeNySdoGvYtUDcS5pM4cJCKeSsrQtfEo2bbB-_iq36k5q13fzFuIqimRSGrc0YgnWBN6K4LyAIbuAO3KiEBhSTll5Af2FWhFHepryXXC_c52Gk2FCvUOaWnTx"
+                     target="_self"> S’inscrire</a>
                 </li>
               </ul>
             </div>
