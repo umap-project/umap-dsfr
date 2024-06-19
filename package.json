@@ -19,9 +19,9 @@
   },
   "homepage": "https://umap-project.org/",
   "dependencies": {
-    "countup.js": "2.6.2",
-    "@gouvfr/dsfr": "1.9.3",
-    "purgecss": "5.0.0"
+    "countup.js": "2.8.0",
+    "@gouvfr/dsfr": "1.12.0",
+    "purgecss": "6.0.0"
   },
   "scripts": {
     "vendors": "scripts/vendorsjs.sh"
