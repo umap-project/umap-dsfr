@@ -97,12 +97,6 @@
                href="{{ url }}"
                {% if request.path == url %}aria-current="page"{% endif %}>Explorer les cartes</a>
           </li>
-          <li class="fr-nav__item" data-fr-js-navigation-item="true">
-            <a class="fr-nav__link"
-               href="https://discover.umap-project.org/fr/"
-               target="_blank"
-               rel="noopener">Documentation</a>
-          </li>
           <li class="fr-nav__item">
             <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-blog">Blog</button>
             <div class="fr-collapse fr-menu" id="menu-blog">
@@ -136,6 +130,12 @@
                 </li>
               </ul>
             </div>
+          </li>
+          <li class="fr-nav__item" data-fr-js-navigation-item="true">
+            <a class="fr-nav__link"
+               href="https://discover.umap-project.org/fr/"
+               target="_blank"
+               rel="noopener">Documentation</a>
           </li>
         </ul>
       </nav>
