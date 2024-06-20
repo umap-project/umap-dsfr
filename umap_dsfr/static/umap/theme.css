@@ -174,9 +174,6 @@ img#location-france {
     color: rgb(0, 0, 145);
 }
 
-#blog-article h1 {
-    margin-top: 3rem;
-}
 /* Unsure why purgecss does not handle these styles. */
 @media (min-width:62em){
     .fr-mx-lg-12w {

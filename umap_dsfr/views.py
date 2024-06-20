@@ -8,7 +8,9 @@ from django.contrib.syndication.views import Feed
 from django.http import HttpResponse
 from django.template import loader
 from django.template.defaultfilters import slugify
+from django.views.generic.base import TemplateView
 from django.urls import reverse
+
 from umap.views import Home, Search
 
 from .utils import each_file_from
@@ -113,3 +115,7 @@ def infolettres(request, slug):
         "article": article,
     }
     return HttpResponse(template.render(context, request))
+
+
+class MentionsLegales(MenuContextMixin, TemplateView):
+    template_name = "umap/mentions_legales.html"
