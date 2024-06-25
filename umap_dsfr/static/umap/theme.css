@@ -191,6 +191,9 @@ img#location-france {
 #blog-article .fr-alert:has(+ h3) {
     margin-bottom: 2rem;
 }
+:target h2 {
+    background-color: #fceeac; /* green-tilleul-verveine-950 */
+}
 .fr-alert__title {
     margin-top: 0;
 }

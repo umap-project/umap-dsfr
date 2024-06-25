@@ -14,7 +14,7 @@ urlpatterns = (
     + [
         path("blog/feed/", BlogFeed(), name="blog_feed"),
         path("blog/<slug:slug>/", blog, name="blog"),
-        path("infolettres/<slug:slug>/", infolettres, name="infolettres"),
+        path("infolettres/", infolettres, name="infolettres"),
         path(
             "contents/mentions-legales/",
             MentionsLegales.as_view(),

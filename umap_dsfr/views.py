@@ -33,9 +33,11 @@ class Article:
         self.description = self.item.get("description")
         self.image = self.item.get("image")
         self.image_alt = self.item.get("image_alt")
+        self.link = self.item.get("link")
         self.tags = self.item.get("tags", [])
         self.slug = slugify(self.title)
-        self.url = reverse(self.kind, args=[self.slug])
+        if self.kind == "blog":
+            self.url = reverse(self.kind, args=[self.slug])
 
     def __eq__(self, other):
         return self.slug == other.slug
@@ -81,7 +83,6 @@ class MenuContextMixin:
     def get_context_data(self, **kwargs):
         context = super().get_context_data()
         context["blog"] = Article.all(BLOG_SRC)
-        context["infolettres"] = Article.all(INFOLETTRES_SRC)
         return context
 
 
@@ -94,25 +95,21 @@ class DSFRSearch(MenuContextMixin, Search): ...
 def blog(request, slug):
     template = loader.get_template("umap/article.html")
     blog = Article.all(BLOG_SRC)
-    infolettres = Article.all(INFOLETTRES_SRC)
     article = [item for item in blog if item.slug == slug].pop()
     context = {
         "blog": blog,
-        "infolettres": infolettres,
         "article": article,
     }
     return HttpResponse(template.render(context, request))
 
 
-def infolettres(request, slug):
-    template = loader.get_template("umap/article.html")
+def infolettres(request):
+    template = loader.get_template("umap/infolettres.html")
     infolettres = Article.all(INFOLETTRES_SRC)
     blog = Article.all(BLOG_SRC)
-    article = [item for item in infolettres if item.slug == slug].pop()
     context = {
         "infolettres": infolettres,
         "blog": blog,
-        "article": article,
     }
     return HttpResponse(template.render(context, request))
 
