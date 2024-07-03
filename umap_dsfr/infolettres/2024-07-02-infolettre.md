@@ -1,7 +1,7 @@
 ---
 title: Infolettre du 2 juillet
 date: 2024-07-02
-link: https://dawu7.r.ag.d.sendibm3.com/mk/mr/sh/1f8JAEjGcfF85qhq1vVjtQPBHr/E_zV_3RGo96E
+link: https://sh1.sendinblue.com/ade5ewskn9pfe.html
 tags:
     - Infolettre
 ---
