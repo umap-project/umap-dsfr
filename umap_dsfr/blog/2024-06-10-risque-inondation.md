@@ -147,6 +147,6 @@ Entretien avec Sophie Clairet, géographe, Chargée de déploiement et Aurélie 
 
 * Pour toute question, problème : umap@anct.beta.gouv.fr
 * L’instance uMap pour les agents publics : [https://umap.incubateur.anct.gouv.fr/fr/](https://umap.incubateur.anct.gouv.fr/fr/)
-* Les webinaires : [page d’inscription](https://formulaires.incubateur.anct.gouv.fr/doc/eD75eJLqWNqq/table/5/reponse/form/70)
+* Les webinaires : [page d’inscription](https://grist.incubateur.anct.gouv.fr/o/anct/forms/tApX3WqkR5eo2gPxY8DuFm/30)
 
 </div>
