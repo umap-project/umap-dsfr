@@ -139,11 +139,12 @@
           <h2 class="fr-my-4w">Billets de blog</h2>
           {% for article in blog %}
             {% if article.description %}
-              <div class="fr-card fr-enlarge-link fr-card--horizontal">
+              <div class="fr-card fr-enlarge-link fr-card--horizontal fr-mb-4w">
                 <div class="fr-card__body">
                   <div class="fr-card__content">
                     <h3 class="fr-card__title">
                       <a href="{{ article.url }}">{{ article.title }}</a>
+                      ({{ article.date }})
                     </h3>
                     <p class="fr-card__desc">{{ article.description }}</p>
                     <div class="fr-card__start">
