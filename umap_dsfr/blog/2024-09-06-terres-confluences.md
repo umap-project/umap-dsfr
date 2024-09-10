@@ -64,47 +64,9 @@ Simon Maurel : Nous avons **nos propres pictogrammes et les utilisons dans uMap
 
 Simon Maurel : Le service communication reçoit de nombreuses demandes pour une carte qui identifierait les secteurs de collecte des ordures ménagères. Les habitants ont besoin de visualiser facilement les jours et horaires de passage. Pour avoir suivi **des formations sur des logiciels plus compliqués qui n’apportaient pas forcément plus de résultats, je considère que uMap est un très bon outil.** En plus, il permet d’utiliser des fonds de carte très riches pour peu que le territoire soit bien renseigné. Bien entendu, je contribue aussi à l’enrichissement des fonds OpenStreetMap, c’est essentiel. D’ailleurs **nos élus demandent des fonds de cartes à jour et précis.**
 
-
 <div class="fr-alert fr-alert--info">
-<h4 class="fr-alert__title">🔆 Utilisation du CSS</h4>
 
-Pour afficher le titre en capitales et en orange (code de la couleur `ea8010`), ouvrir « Options d’interaction » du calque pour et compléter comme suit le « Gabarit manuel de popup » :
-
-<figure>
-<img src="/static/umap/img/blog/panneau-popup-css.png" alt="Capture d’écran du panneau avec des informations CSS.">
-<figcaption>
-
-Capture d’écran du panneau avec des informations CSS :
-
-    style="margin-bottom: 5px; font-size: 15pt; text-transform: uppercase; color: #ea8010;"
-
-</figcaption>
-</figure>
-
-Résultat :
-
-<figure>
-<img src="/static/umap/img/blog/panneau-css-resultat.png" alt="Capture d’écran de la popup stylée en CSS.">
-<figcaption>
-
-Capture d’écran de la popup stylée en CSS.
-
-</figcaption>
-</figure>
-
-Pour afficher un bouton cliquable, ici avec la même couleur orange :
-
-Sélectionner un pointeur, ouvrir « Description » :
-
-<figure>
-<img src="/static/umap/img/blog/panneau-bouton-css.png" alt="Capture d’écran de la popup stylée en CSS avec le panneau adjacent.">
-<figcaption>
-
-Capture d’écran de la popup stylée en CSS avec le panneau adjacent.
-
-</figcaption>
-</figure>
+Propos recueillis le 19 juillet 2024 par Sophie Clairet.
 
 </div>
 
-Propos recueillis le 19 juillet 2024 par Sophie Clairet
