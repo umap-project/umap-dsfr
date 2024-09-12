@@ -25,6 +25,7 @@
       href="{% static 'umap/vendors/iconlayers/iconLayers.css' %}" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/dsfr.min.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/dsfr-lite/icons.min.css" />
+  <link rel="stylesheet" href="{{ STATIC_URL }}umap/vars.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/content.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/map.css" />
   <link rel="stylesheet" href="{{ STATIC_URL }}umap/theme.css" />
@@ -41,8 +42,10 @@
   {% include "umap/navigation.html" %}
 {% endblock header %}
 {% block content %}
+  <div class="fr-container">
   {% block maincontent %}
   {% endblock maincontent %}
+  </div>
 {% endblock content %}
 {% block footer %}
   {% include "umap/content_footer.html" %}
