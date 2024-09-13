@@ -216,6 +216,9 @@ form:has(input[type="search"]) input[type="submit"] {
 h2.tabs a {
     text-decoration: none;
 }
+h2.tabs a[href$="/me/profile"] {
+    display: none;
+}
 h2.tabs a:not(.selected) {
     background-image: unset;
 }
