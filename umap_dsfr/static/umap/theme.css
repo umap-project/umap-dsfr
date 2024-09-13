@@ -165,8 +165,8 @@ img#location-france {
 }
 .table-header form input,
 .table-header .button-download {
-    color: rgb(0, 0, 145);
-    border-color: rgb(0, 0, 145);
+    color: var(--color-darkBlue);
+    border-color: var(--color-darkBlue);
     background-image: none;
 }
 .table-header form input[type="search"] {
@@ -175,7 +175,7 @@ img#location-france {
 .table-wrapper table a,
 .table-wrapper table thead tr th,
 .table-wrapper table th[scope="row"] {
-    color: rgb(0, 0, 145);
+    color: var(--color-darkBlue);
 }
 
 
