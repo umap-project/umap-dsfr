@@ -8,12 +8,9 @@ tags:
     - Témoignage
 ---
 
-
 *Les communes sont nombreuses à souhaiter présenter sur leur site Internet une carte interactive simple et efficace des équipements publics avec les contours communaux. Simon Maurel, géomaticien à la Communauté de communes de Terres des Confluences (Tarn-et-Garonne), explique le projet.*
 
-
-
-#### La carte interactive de Terres des Confluences
+### La carte interactive de Terres des Confluences
 
 Elle est accessible depuis la page d’accueil du [site Internet](https://www.terresdesconfluences.fr/) de la communauté de communes, en cliquant sur “Carte interactive”.
 
@@ -42,10 +39,10 @@ Simon Maurel : La carte est en ligne depuis février 2024, réalisée sur l’[
 Simon Maurel : Oui c’est cela, **je mets la carte à jour quand je le souhaite.** Je connaissais déjà uMap que j’utilisais à la mairie de [Moissac](https://www.moissac.fr/). J’avais déjà réalisé plusieurs cartes sur l’instance OpenStreetMap *(Nota : il existe désormais une [instance de uMap](https://umap.incubateur.anct.gouv.fr/fr/) dédiée aux agents publics)*. Le lien n’est pas tellement diffusé mais elles sont accessibles sur la page de cartographie de Moissac.
 
 <figure>
-<img src="/static/umap/img/blog/cartes-moissac.gif" class="fr-responsive-img" alt="Capture d’écran des cartes du site de Moissac.">
+<img src="/static/umap/img/blog/cartes-moissac.gif" class="fr-responsive-img" alt="Capture d’écran animée des cartes du site de Moissac.">
 <figcaption>
 
-Capture d’écran des [cartes du site de Moissac](http://carto.moissac.fr/).
+Capture d’écran animée des [cartes du site de Moissac](http://carto.moissac.fr/).
 
 *Ces cartes sont à découvrir également sur [uMap](https://umap.openstreetmap.fr/fr/user/Moissac/).*
 </figcaption>
