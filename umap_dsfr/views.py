@@ -1,16 +1,15 @@
+from dataclasses import dataclass
 from pathlib import Path
 
 import frontmatter
 import mistune
-from dataclasses import dataclass
 from django.conf import settings
 from django.contrib.syndication.views import Feed
 from django.http import HttpResponse
 from django.template import loader
 from django.template.defaultfilters import slugify
-from django.views.generic.base import TemplateView
 from django.urls import reverse
-
+from django.views.generic.base import TemplateView
 from umap.views import Home, Search
 
 from .utils import each_file_from
@@ -37,7 +36,7 @@ class Article:
         self.tags = self.item.get("tags", [])
         self.slug = slugify(self.title)
         if self.kind == "blog":
-            self.url = reverse(self.kind, args=[self.slug])
+            self.url = reverse("blog_article", args=[self.slug])
 
     def __eq__(self, other):
         return self.slug == other.slug
@@ -92,8 +91,17 @@ class DSFRHome(MenuContextMixin, Home): ...
 class DSFRSearch(MenuContextMixin, Search): ...
 
 
-def blog(request, slug):
-    template = loader.get_template("umap/article.html")
+def blog_list(request):
+    template = loader.get_template("umap/blog_list.html")
+    blog = Article.all(BLOG_SRC)
+    context = {
+        "blog": blog,
+    }
+    return HttpResponse(template.render(context, request))
+
+
+def blog_article(request, slug):
+    template = loader.get_template("umap/blog_article.html")
     blog = Article.all(BLOG_SRC)
     article = [item for item in blog if item.slug == slug].pop()
     context = {

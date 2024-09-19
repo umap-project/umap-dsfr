@@ -101,11 +101,16 @@
             <button class="fr-nav__btn" aria-expanded="false" aria-controls="menu-blog">Blog</button>
             <div class="fr-collapse fr-menu" id="menu-blog">
               <ul class="fr-menu__list">
-                {% for article in blog %}
+                {% for article in blog|slice:":3" %}
                   <li>
-                    <a class="fr-nav__link" href="{{ article.url }}" target="_self">{{ article.title }}</a>
+                    <a class="fr-nav__link" href="{{ article.url }}" target="_self">{{ article.title }} ({{ article.date }})</a>
                   </li>
                 {% endfor %}
+                <li>
+                  <a class="fr-nav__link"
+                     href="{% url 'blog_list' %}"
+                     target="_self">Tous les articles</a>
+                </li>
                 <li>
                   <a class="fr-nav__link fr-icon-rss-line"
                      href="{% url 'blog_feed' %}"

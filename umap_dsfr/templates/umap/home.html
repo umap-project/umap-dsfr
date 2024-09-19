@@ -136,8 +136,8 @@
     <div id="blog-latest">
       <div class="fr-container">
         <div class="fr-grid-row fr-grid-row--gutters fr-mt-8w">
-          <h2 class="fr-my-4w">Billets de blog</h2>
-          {% for article in blog %}
+          <h2 class="fr-my-4w">Derniers billets de blog</h2>
+          {% for article in blog|slice:":3" %}
             {% if article.description %}
               <div class="fr-card fr-enlarge-link fr-card--horizontal fr-mb-4w">
                 <div class="fr-card__body">
@@ -168,6 +168,9 @@
               </div>
             {% endif %}
           {% endfor %}
+          <p class="fr-p-4w btns-group--center">
+            <a class="fr-btn fr-btn--lg fr-btn--secondary" href="{% url "blog_list" %}">Tous les billets de blog</a>
+          </p>
         </div>
       </div>
       <div id="join">
