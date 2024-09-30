@@ -23,9 +23,7 @@ Jean-Christophe Fichet : J’ai longtemps travaillé au Pôle de compétences e
 >
 > La page de Cartolycée : [https://www.cartolycee.net/spip.php?article173](https://www.cartolycee.net/spip.php?article173)
 
-### Il n’est pas évident en classe d’accéder à des postes informatiques ?
-
-Jean-Christophe Fichet : C’est cela, car le lycée n’offre qu’une seule salle informatique où travailler en classe entière sur des ordinateurs. Avec des effectifs de 35 élèves, difficile de trouver des créneaux. Je n’ai donc jamais construit de carte avec les élèves ni fait construire de carte. C’est un objectif, **mais pour l’instant, la carte constitue surtout un support, soit de travail en cours, soit de travail à la maison.**
+Pour l’instant, la carte constitue surtout un support, soit de travail en cours, soit de travail à la maison.
 
 Les élèves qui suivent la spécialité histoire-géographie géopolitique sciences politiques (HGGSP) accèdent sur uMap à de nombreux éléments de lecture ou de travail, comme sur la carte du goulag en URSS :
 
