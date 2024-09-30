@@ -8,7 +8,7 @@ tags:
     - Témoignage
 ---
 
-*Jean-Christophe Fichet, professeur agrégé dans l’Académie de Rouen et formateur, montre comment utiliser uMap pour présenter géographiquement une large palette de ressources pédagogiques (films, textes…). Cartes à l’appui depuis son site Cartolycée, son témoignage ouvre des perspectives aux enseignants pour s’approprier les sujets, aux élèves pour plonger dans des documents variés, et à tous ceux qui veulent faire vivre des documents sur des cartes.*
+*Jean-Christophe Fichet, professeur agrégé dans l’Académie de Normandie et formateur, montre comment utiliser uMap pour présenter géographiquement une large palette de ressources pédagogiques (films, textes…). Cartes à l’appui depuis son site Cartolycée, son témoignage ouvre des perspectives aux enseignants pour s’approprier les sujets, aux élèves pour plonger dans des documents variés, et à tous ceux qui veulent faire vivre des documents sur des cartes.*
 
 
 ### En passant en revue votre site [Cartolycée](http://www.cartolycee.net/), je suis impressionnée par le nombre de ressources à disposition
