@@ -26,17 +26,17 @@ And set the correct number of results per search:
 
     UMAP_MAPS_PER_SEARCH = 24
 
-Add MonComptePro settings:
+Add ProConnect settings:
 
     # For testing
-    SOCIAL_AUTH_MONCOMPTEPRO_OIDC_ENDPOINT = "https://app-test.moncomptepro.beta.gouv.fr"
+    SOCIAL_AUTH_PROCONNECT_OIDC_ENDPOINT = "https://app-test.proconnect.beta.gouv.fr"
     # For production
-    SOCIAL_AUTH_MONCOMPTEPRO_OIDC_ENDPOINT = "https://app.moncomptepro.beta.gouv.fr"
-    SOCIAL_AUTH_MONCOMPTEPRO_KEY = "xxxxx"
-    SOCIAL_AUTH_MONCOMPTEPRO_SECRET = "xxxx"
+    SOCIAL_AUTH_PROCONNECT_OIDC_ENDPOINT = "https://app.proconnect.beta.gouv.fr"
+    SOCIAL_AUTH_PROCONNECT_KEY = "xxxxx"
+    SOCIAL_AUTH_PROCONNECT_SECRET = "xxxx"
 
     AUTHENTICATION_BACKENDS = (
-        'umap_dsfr.moncomptepro.MonComptePro',
+        'umap_dsfr.proconnect.ProConnect',
         'django.contrib.auth.backends.ModelBackend',
     )
 
