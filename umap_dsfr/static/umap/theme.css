@@ -247,6 +247,10 @@ h2.tabs a:not(.selected) {
     margin-top: 0;
 }
 
+.umap-contextmenu {
+    list-style: none;
+}
+
 /* ****************************** */
 /* Overriding some intrusive DSFR */
 /* ****************************** */
