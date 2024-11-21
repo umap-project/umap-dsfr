@@ -7,9 +7,11 @@
           <div class="fr-card__content">
             <h3 class="fr-card__title">
               <a href="{{ map_inst.get_absolute_url }}">{{ map_inst.name }}</a>
-              {% if map_inst.owner %}
-                <em>{% trans "by" %} <a href="{{ map_inst.owner.get_url }}">{{ map_inst.owner }}</a></em>
-              {% endif %}
+              {% with author=map_inst.get_author %}
+                {% if author %}
+                  <em>{% trans "by" %} <a href="{{ author.get_url }}">{{ author }}</a></em>
+                {% endif %}
+              {% endwith %}
             </h3>
           </div>
         </div>
