@@ -33,18 +33,19 @@
         <li class="fr-footer__bottom-item">
           <a class="fr-footer__bottom-link" href="#">Plan du site</a>
         </li>
-        {% url "mentions_legales" as url %}
+        {% url "mentions_legales" as url_mentions %}
         <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="{{ url }}#accessibilite">Accessibilité: non conforme</a>
+          <a class="fr-footer__bottom-link" href="{{ url_mentions }}#accessibilite">Accessibilité: non conforme</a>
         </li>
         <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="{{ url }}">Mentions légales</a>
+          <a class="fr-footer__bottom-link" href="{{ url_mentions }}">Mentions légales</a>
+        </li>
+        {% url "politique_confidentialite" as url_politique %}
+        <li class="fr-footer__bottom-item">
+          <a class="fr-footer__bottom-link" href="{{ url_politique }}">Données personnelles</a>
         </li>
         <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="#">Données personnelles</a>
-        </li>
-        <li class="fr-footer__bottom-item">
-          <a class="fr-footer__bottom-link" href="#">Gestion des cookies</a>
+          <a class="fr-footer__bottom-link" href="{{ url_politique }}#cookies">Gestion des cookies</a>
         </li>
       </ul>
       <div class="fr-footer__bottom-copy">

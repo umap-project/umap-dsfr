@@ -50,7 +50,7 @@ dsfr-lite: ## Copy DSFR pertinent files and purge the huge CSS
 
 .PHONY: help
 help:
-	@python -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
+	@python3 -c "$$PRINT_HELP_PYSCRIPT" < $(MAKEFILE_LIST)
 
 # See https://daniel.feldroy.com/posts/autodocumenting-makefiles
 define PRINT_HELP_PYSCRIPT # start of Python section

@@ -124,3 +124,7 @@ def infolettres(request):
 
 class MentionsLegales(MenuContextMixin, TemplateView):
     template_name = "umap/mentions_legales.html"
+
+
+class PolitiqueConfidentialite(MenuContextMixin, TemplateView):
+    template_name = "umap/politique_confidentialite.html"

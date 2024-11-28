@@ -7,6 +7,7 @@ from .views import (
     DSFRHome,
     DSFRSearch,
     MentionsLegales,
+    PolitiqueConfidentialite,
     blog_article,
     blog_list,
     infolettres,
@@ -27,6 +28,11 @@ urlpatterns = (
             "contents/mentions-legales/",
             MentionsLegales.as_view(),
             name="mentions_legales",
+        ),
+        path(
+            "contents/politique-confidentialite/",
+            PolitiqueConfidentialite.as_view(),
+            name="politique_confidentialite",
         ),
     ]
 )
