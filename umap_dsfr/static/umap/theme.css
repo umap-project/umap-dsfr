@@ -73,8 +73,8 @@ body.login .umap-nav h1 a {
 #exemples {
     background-color: #263b58;
 }
-#exemples h2,
-#exemples h3.fr-tile__body {
+#exemples h1,
+#exemples h2.fr-tile__body {
     color: var(--grey-1000-100);
 }
 .btns-group--center {
