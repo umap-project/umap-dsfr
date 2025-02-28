@@ -10,7 +10,7 @@ tags:
 
 *De la série de documentaires TV « Les plus beaux treks de France » à « la route des grands lacs du Morvan », l’approche est logique : proposer aux cyclo voyageurs des itinéraires de qualité et « sur mesure ». Laurent Bouit, réalisateur et Sébastien Baholet, chargé des Activités de pleine nature au Conseil Départemental de la Nièvre détaillent leur approche très originale où le circuit touristique est d’abord ancré dans les outils numériques ouverts, réseaux sociaux et carte uMap. Embarquement pour un bien joli voyage dans une carte éditorialisée !*
 
-### La genèse de cette histoire
+## La genèse de cette histoire
 
 Laurent Bouit : je suis réalisateur de documentaires télévisés centrés sur des sujets treks et itinérances. J’ai beaucoup travaillé sur la série « [**Les plus beaux treks de France**](https://www.facebook.com/@lesplusbeauxtreks?locale=fr_FR) » (production Camera One) qui compte 20 films et a été diffusée sur de nombreuses chaînes, Voyage, France5, France3, etc. Par ailleurs, j’ai un attachement avec le département de la Nièvre et le massif du Morvan, vivant pour partie près de Nevers où j’ai toujours pratiqué des activités de pleine nature. Depuis 4-5 ans, je m’intéresse à la conception d’itinéraires.
 
@@ -31,7 +31,7 @@ Photo de l’étang du merle, km 45.
 </figure>
 
 
-### Communiquer sur l’itinéraire
+## Communiquer sur l’itinéraire
 
 Laurent Bouit : compte tenu des coûts des panneaux, nous avons écarté le balisage sur le terrain et donc **choisi de promouvoir cet itinéraire avec des technologies GPS et des traces GPX**. Il fallait trouver l’outil à utiliser pour le faire connaître.
 
@@ -45,7 +45,7 @@ Le point de départ de notre utilisation d’uMap, c’était vraiment de trouve
 
 
 <div class="fr-alert fr-alert--info">
-<h4 class="fr-alert__title">❓ Fond & trace GPX</h4>
+<h3 class="fr-alert__title">❓ Fond & trace GPX</h3>
 
 Le fond de carte OpenCycleMap est proposé sur l’instance [uMap OSM](https://umap.openstreetmap.fr/fr/), pas encore sur [uMap destiné aux agents publics](https://umap.incubateur.anct.gouv.fr/fr/). La trace GPX, c’est à dire les points GPS de l’itinéraire, peut-être importée depuis un autre outil comme OsmAnd. Il existe de nombreux [tutoriels](https://www.teritorio.fr/support/aide/contributions-organisees/categ-info-consigne/creer-une-trace-gpx-pour-un-support-balades-circuits-etc/) en ligne et le tout est relativement rapide - bien plus que de dessiner sur les voies !
 
@@ -55,12 +55,12 @@ Sébastien Baholet : je suis chargé des activités de pleine nature au Départ
 
 Je ne suis pas un gros utilisateur des applications de randonnées comme Laurent peut l’être. Par contre, j’aime bien les outils libres ou les outils un peu différents des « outils métiers » utilisés dans les administrations, notamment [Inkscape](https://inkscape.org/fr/), [OsmAnd](https://osmand.net/) et **[uMap](https://umap.openstreetmap.fr/fr/) que j’utilise depuis une dizaine d’années, plutôt pour le développement de projets.** J’ai commencé à me servir d’uMap pour le projet [« La Méditerranée à vélo »](https://www.lamediterraneeavelo.com/), section de l’EuroVélo 8 à travers PACA et l’Occitanie. Nous étions une trentaine de partenaires à travailler sur uMap pour tracer un itinéraire et partager un certain nombre d’informations entre nous. **J’ai utilisé uMap en tant que carte collaborative au départ.**
 
-### Une carte évolutive
+## Une carte évolutive
 
 Sébastien Baholet : lors de ce projet, je me suis rendu compte de nouvelles fonctions d’uMap. **Au fur et à mesure de ses évolutions, uMap offre encore de nouvelles possibilités.** En travaillant sur la carte de la route des grands lacs, j’ai découvert l’utilisation d’overpass turbo pour importer directement des données du fond OpenStreetMap. Nous nous sommes ainsi amusés à enrichir la carte au fur et à mesure (abris, points d’eau, ravitaillement…), à partir de la base que Laurent a décrite.
 
 <div class="fr-alert fr-alert--info">
-<h4 class="fr-alert__title">❓ Overpass turbo</h4>
+<h3 class="fr-alert__title">❓ Overpass turbo</h3>
 
 Cet outil permet de récupérer les objets qui font partie des fonds de carte OSM. Plusieurs solutions sont proposées pour utiliser overpass avec uMap : l’[assistant d’import en un clic](https://discover.umap-project.org/fr/tutorials/6-one-click-data-import/) ou l’utilisation d’une requête sous forme d’URL. Sans aller jusqu’à overpass, Geodatamine est proposé dans l’assistant d’import. Il donne accès à de nombreux points d’intérêt (parkings, campings, sources d’eau potable, défibrillateurs…).
 
@@ -81,13 +81,13 @@ Cliché Laurent Bouit.
 
 Actuellement, la carte présente quelques couches visibles par défaut. De nombreuses autres sont masquées : voilà autant d’idées pour d’autres thématiques éventuellement intéressantes à faire apparaître, ce sont les pistes de travail pour les mois qui viennent.
 
-### Une carte qui complète la palette des outils
+## Une carte qui complète la palette des outils
 
 Sébastien Baholet : **cette carte comble des lacunes dans les outils à notre disposition pour la promotion touristique**. Les offices de tourisme locaux, des Départements et des Régions alimentent une base de données tourisme mise à disposition du public par divers sites Internet tels que [Nièvre Tourisme](https://www.nievre-tourisme.com/), [Bourgogne Tourisme](https://www.bourgogne-tourisme.com), [Nevers Tourisme](https://www.nevers-tourisme.com/). Ces outils ne permettent pas une utilisation libre des données. Ainsi, les cartes sont relativement figées et ne laissent pas une totale liberté. **La carte uMap arrive en complément.**
 
 **La trace GPX est téléchargée depuis [Nièvre tourisme](https://decibelles-data.tourinsoft.com/upload/trace/ITIBFC000V52P2Y3.gpx)**, seule solution qui n’obligeait pas les visiteurs à se créer un compte ou à cliquer de nombreuses fois avant de parvenir à l’information. Le site institutionnel et ses fonctions sont bien valorisés. [Nièvre tourisme](https://www.nievre-tourisme.com/parcours-velo/la-route-des-grands-lacs-du-morvan) présente la route des grands lacs dans son ensemble. Et parallèlement, **les réseaux sociaux et la carte uMap fournissent une information spécifique et pratique** pour les gens qui veulent se lancer.
 
-### Éditorialiser la carte
+## Éditorialiser la carte
 
 Laurent Bouit : **en tant qu’auteur et réalisateur, je trouve vraiment intéressant de pouvoir éditorialiser l’itinéraire**. Il a été conçu au départ autour des campings comme hébergements. Cette approche nous permet de positionner les campings sur la trace mais aussi éventuellement de choisir ceux qui nous paraissent les plus cohérents pas rapport au public visé. C’est la grosse différence avec le même itinéraire qui pourrait être affiché sur le site d’un Office du tourisme avec l’ensemble des hébergements et le risque que les voyageurs se trouvent noyés sous la masse d’information. **En ajoutant, comme le dit Sébastien, des photographies et des vidéos, nous obtenons un outil de communication à part entière.**
 
@@ -103,13 +103,13 @@ Détail de la carte uMap de l’itinéraire.
 </figcaption>
 </figure>
 
-### Les cyclo-voyageurs accèdent facilement à l’information
+## Les cyclo-voyageurs accèdent facilement à l’information
 
 Sébastien Baholet : **j’aimerais pouvoir générer un PDF pour proposer un atlas de l’itinéraire**. Pour que cette route soit accessible aussi à ceux qui ne sont pas très utilisateurs d’outils numériques, je pense qu’un carnet de route serait très intéressant, soit un PDF, soit un papier imprimé. Les données s’exportent simplement depuis uMap. [Organic Maps](https://organicmaps.app/fr/) permet d’importer la trace GPX de uMap et de l’utiliser hors connexion. Si nous pouvions importer aussi les pictogrammes des campings, les points de km, l’itinéraire serait accessible hors ligne.
 Laurent Bouit : **j’imagine des suites très intéressantes pour proposer des itinéraires « sur mesure »**, des voyages « clé en main » avec des hébergements prédéfinis. Umap pourrait très bien être un outil pour personnaliser les roadbooks client par client pour des agences qui vendent des treks clés en main.
 
 
-#### Pour aller plus loin :
+### Pour aller plus loin :
 
 * Suivre l’actualité de l’itinéraire sur les réseaux sociaux :
 Page Facebook [La Route des Grands Lacs du Morvan ](https://www.facebook.com/laroutedesgrandslacsdumorvan)

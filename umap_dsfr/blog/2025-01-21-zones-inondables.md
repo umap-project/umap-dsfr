@@ -12,7 +12,7 @@ tags:
 
 J’avais participé à un Webinaire sur uMap en juillet, ce qui m’avait permis de découvrir cet outil bien plus simple dans la prise en main que QGIS, surtout pour **l’hébergement de la carte afin de la faire afficher sur un site internet**.
 
-### La carte des zones inondables
+## La carte des zones inondables
 La carte des zones inondables a été créée dans le cadre de [l’axe 5 du PAPI](https://www.observatoire-neste.fr/article/diagnostics-de-vulnerabilite) Neste 2 que le PETR du Pays des Nestes porte. L’axe 5 concerne la **réduction de la vulnérabilité des bâtis face aux inondations**.
 
 <iframe width="100%" height="400px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.incubateur.anct.gouv.fr/fr/map/cartographie-des-zones-inondables-du-bassin-versan_1384?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=false&captionMenus=true"></iframe>
@@ -29,7 +29,7 @@ Par l’intermédiaire de uMap, j’ai pu facilement intégrer la carte dans not
 
 Les cartes interactives sont de bons outils visuels pour la communication et la sensibilisation.
 
-### Carte interactive du bassin versant de la Neste
+## Carte interactive du bassin versant de la Neste
 
 A la suite de cette première carte, j’ai utilisé à nouveau uMap pour réaliser une carte interactive pour la présentation du bassin versant de la Neste de manière générale. Ce sont à nouveau des couches locales qui ont été importées sur le site uMap.
 

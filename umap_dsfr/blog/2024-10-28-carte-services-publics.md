@@ -11,7 +11,7 @@ tags:
 *Partager une carte des services sur un site, c’est garantir la compréhension rapide pour tous les publics. À la clé : une meilleure attractivité, un gain de temps pour tous, agents comme usagers. La plupart du temps, le site de votre collectivité ou de votre service embarque déjà toutes les informations sur plusieurs pages différentes. Ce billet “pas-à-pas” propose de réaliser une carte très simple, un peu sur le modèle du témoignage publié en septembre [« La » carte des services au public à avoir sur son site](https://umap.incubateur.anct.gouv.fr/blog/la-carte-des-services-au-public-a-avoir-sur-son-site/).*
 
 
-### Pour commencer
+## Pour commencer
 
 * Ouvrir [le site uMap pour les agents publics](https://umap.incubateur.anct.gouv.fr/fr/) et se connecter à son compte
 * Cliquer sur « Créer une carte » puis dans l’outil de recherche, indiquer le nom de la commune ou zoomer sur la carte.
@@ -37,7 +37,7 @@ Quels sont les services à présenter ? Cela dépend des situations, dans le ca
 
 Le fond OpenStreetMap propose bien d’autres informations comme les sentiers de randonnée !
 
-### Regrouper les informations par thématiques
+## Regrouper les informations par thématiques
 
 Pour que la carte reste simple et lisible : regrouper les services par catégories. Chacune fera l’objet d’un calque associé à une couleur différente :
 
@@ -48,7 +48,7 @@ Pour que la carte reste simple et lisible : regrouper les services par catégor
 - Tourisme et loisirs
 - Urgence (il sera toujours possible d’ajouter autre chose que le défibrillateur)
 
-### Créer un calque par thématique
+## Créer un calque par thématique
 
 Il est préférable de commencer par la création des calques pour gagner du temps ! On règle tout ce qui concerne le calque : couleur des objets, affichage ou non du nom au survol de la souris, des popups lorsqu’on clique.
 
@@ -84,7 +84,7 @@ Capture d’écran du panneau de gestion des calques.
 </figcaption>
 </figure>
 
-### Importer les données ou les ajouter une par une
+## Importer les données ou les ajouter une par une
 
 Nous allons importer les données qui existent déjà en open data en utilisant l’assistant d’import.
 
@@ -228,7 +228,7 @@ Il est possible d’ajouter un pictogramme de type « livre » afin de disting
 
 Continuer avec les différents services, en changeant de calque au fur et à mesure et en ajoutant les informations d’accès.
 
-### Il manque une information sur le fond de carte OpenStreetMap ?
+## Il manque une information sur le fond de carte OpenStreetMap ?
 
 Certains *Points d’apport volontaires* sont manquants ?
 
@@ -258,17 +258,17 @@ Capture d’écran avec un marqueur positionné.
 
 > Astuce : Pour bien repérer l’endroit dans uMap, il est conseillé d’utiliser la photo aérienne de l’IGN.
 
-### Le résultat
+## Le résultat
 
 <iframe width="100%" height="400px" frameborder="0" allowfullscreen allow="geolocation" src="//umap.incubateur.anct.gouv.fr/fr/map/la-carte-des-services-publics_894?scaleControl=false&miniMap=false&scrollWheelZoom=false&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=false&captionMenus=true"></iframe><p><a href="//umap.incubateur.anct.gouv.fr/fr/map/la-carte-des-services-publics_894?scaleControl=false&miniMap=false&scrollWheelZoom=true&zoomControl=true&editMode=disabled&moreControl=true&searchControl=null&tilelayersControl=null&embedControl=null&datalayersControl=true&onLoadPanel=caption&captionBar=false&captionMenus=true">Voir en plein écran</a></p>
 
-### Parmi les sources utilisées pour cette carte
+## Parmi les sources utilisées pour cette carte
 
 - La [carte de territoire du Guillestrois Queyras](https://www.ccguillestroisqueyras.fr/la-com-com/le-territoire/carte-du-territoire/): pour vérification de certains points d’apport volontaire
 - Reconnaissance de terrain
 - Appel au Point d’information touristique pour le Parking Camping Cars mal situé sur la plupart des cartes.
 
-### Pour toute question, problème
+## Pour toute question, problème
 
 - Consultez [la documentation](https://discover.umap-project.org/fr/)
 - Inscrivez vous à un [webinaire](https://umap.incubateur.anct.gouv.fr/fr/)
