@@ -1,6 +1,6 @@
 ---
 title: Infolettre du 19 décembre
-date: 2024-11-19
+date: 2024-12-19
 link: https://sh1.sendinblue.com/ahyhuwskn9pfe.html
 tags:
     - Infolettre
