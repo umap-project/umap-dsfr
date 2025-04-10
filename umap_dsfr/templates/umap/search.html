@@ -20,7 +20,18 @@
             <h2 class="fr-tile__body fr-ml-0">{% trans "No map found." %}</h2>
           {% endif %}
         {% else %}
-          <h2 class="fr-tile__body fr-ml-0">Dernières cartes créées</h2>
+          {% if request.GET.tags %}
+            <h2 class="fr-tile__body fr-ml-0">
+              Dernières cartes créées dans la catégorie
+              {% for value, label in UMAP_TAGS %}
+                {% if request.GET.tags == value %}
+                  « {{ label }} » :
+                {% endif %}
+              {% endfor %}
+            </h2>
+          {% else %}
+            <h2 class="fr-tile__body fr-ml-0">Dernières cartes créées</h2>
+          {% endif %}
           {% include "umap/map_list.html" with prefix="search_map" %}
         {% endif %}
       </div>
