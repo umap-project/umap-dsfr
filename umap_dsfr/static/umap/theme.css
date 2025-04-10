@@ -257,6 +257,18 @@ h2.tabs a:not(.selected) {
 .umap-contextmenu {
     list-style: none;
 }
+.fr-select {
+    border-radius: 0;
+    border-left: 1px solid var(--border-action-high-blue-france);
+}
+.fr-tag {
+    font-weight: normal;
+}
+p:has(.fr-tag) {
+    line-height: 1.75;
+    margin-bottom: 8px;
+}
+
 
 /* ****************************** */
 /* Overriding some intrusive DSFR */
