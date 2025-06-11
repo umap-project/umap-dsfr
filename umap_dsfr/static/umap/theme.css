@@ -21,7 +21,7 @@ body.login .umap-nav h1 a {
 }
 
 .login-grid a {
-    border:  none;
+    border: none;
     width: 214px;
     height: 56px;
     background-size: initial;
@@ -35,87 +35,101 @@ body.login .umap-nav h1 a {
     padding-left: 60px;
     font-size: 60px;
 }
+
 .fr-header__service-title {
     font-size: 2rem;
     letter-spacing: -1.5px;
     color: #323e56;
 }
+
 .fr-header__tools-links .umap-btn--primary {
-  --hover-tint: var(--hover);
-  --hover: var(--background-action-high-blue-france-hover);
-  --active: var(--background-action-high-blue-france-active);
-  background-color: var(--background-action-high-blue-france);
-  color: var(--text-inverted-blue-france);
+    --hover-tint: var(--hover);
+    --hover: var(--background-action-high-blue-france-hover);
+    --active: var(--background-action-high-blue-france-active);
+    background-color: var(--background-action-high-blue-france);
+    color: var(--text-inverted-blue-france);
 }
 
 .fr-callout--green-archipel-975 {
-  box-shadow: inset 0.25rem 0 0 0 #009099;
-  background-color: #e5fbfd;
+    box-shadow: inset 0.25rem 0 0 0 #009099;
+    background-color: #e5fbfd;
 }
 
 .fr-search-bar {
-  max-width: 40rem;
+    max-width: 40rem;
 }
 
 .fr-header__tools-links [aria-current] {
-  border: 1px solid var(--border-default-grey);
+    border: 1px solid var(--border-default-grey);
 }
 
 #intro,
 #blog-latest {
     background-color: rgb(233, 250, 252);
 }
+
 @media (max-width: 992px) {
     #intro img {
         display: none;
     }
 }
+
 #exemples {
     background-color: #263b58;
 }
+
 #exemples h1,
 #exemples h2.fr-tile__body {
     color: var(--grey-1000-100);
 }
+
 .btns-group--center {
     width: 100%;
     text-align: center;
 }
+
 #exemples .btns-group--center a {
     color: white;
     box-shadow: inset 0 0 0 1px white;
 }
+
 #exemples .btns-group--center a:hover {
     color: inherit;
     background-color: white;
 }
+
 #tutoriel h2 {
     color: var(--green-menthe-sun-373-moon-652);
 }
 
 /* See https://css-tricks.com/responsive-iframes/ */
-[style*="--aspect-ratio"] > :first-child {
-  width: 95%;
+[style*="--aspect-ratio"]> :first-child {
+    width: 95%;
 }
-[style*="--aspect-ratio"] > img {
-  height: auto;
+
+[style*="--aspect-ratio"]>img {
+    height: auto;
 }
+
 @supports (--custom:property) {
-  [style*="--aspect-ratio"] {
-    position: relative;
-  }
-  [style*="--aspect-ratio"]::before {
-    content: "";
-    display: block;
-    padding-bottom: calc(100% / (var(--aspect-ratio)));
-  }
-  [style*="--aspect-ratio"] > :first-child {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-  }
+    [style*="--aspect-ratio"] {
+        position: relative;
+    }
+
+    [style*="--aspect-ratio"]::before {
+        content: "";
+        display: block;
+        padding-bottom: calc(100% / (var(--aspect-ratio)));
+    }
+
+    [style*="--aspect-ratio"]> :first-child {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+    }
 }
+
 @media (max-width: 767px) {
     #tutoriel .responsive-columns-swap {
         flex-direction: column-reverse;
@@ -123,15 +137,17 @@ body.login .umap-nav h1 a {
 }
 
 .u-center {
-  text-align: center;
+    text-align: center;
 }
 
 #statistiques {
     justify-content: space-around;
 }
+
 #statistiques .fr-col {
     box-shadow: inset 0 -.25rem 0 0 var(--border-default-green-menthe);
 }
+
 #statistiques big {
     font-size: xx-large;
     font-weight: bold;
@@ -139,6 +155,7 @@ body.login .umap-nav h1 a {
     display: block;
     padding-top: 1rem;
 }
+
 img#location-france {
     display: block;
     max-width: 100%;
@@ -154,10 +171,12 @@ img#location-france {
     background: #E6EEFE;
     margin-bottom: 0.75rem;
 }
+
 #join img {
     float: left;
     margin-right: 2rem;
 }
+
 #join aside {
     border-left: 2px solid #3558A2;
 }
@@ -165,20 +184,28 @@ img#location-france {
 .table-wrapper table a:not(.icon-link) {
     text-decoration: none;
 }
+
 .table-wrapper .icon-link[href],
 .pagination a {
     text-decoration: none;
     background-image: none;
 }
+
+.wrapper .button,
+.wrapper input {
+    font-weight: normal;
+}
+
 .table-header form input,
 .table-header .button-download {
-    color: var(--color-darkBlue);
     border-color: var(--color-darkBlue);
     background-image: none;
 }
+
 .table-header form input[type="search"] {
     height: var(--icon-size);
 }
+
 .table-wrapper table a,
 .table-wrapper table thead tr th,
 .table-wrapper table th[scope="row"] {
@@ -190,22 +217,27 @@ form#team_form {
     display: flex;
     flex-direction: column;
 }
+
 form#team_form div {
     display: flex;
     flex-direction: row;
     margin-block-end: 1rem;
 }
+
 form#team_form label {
     min-width: 200px;
 }
+
 form#team_form textarea,
 form#team_form input {
     border: 2px solid var(--color-darkBlue);
 }
+
 form#team_form input[type="submit"] {
     margin-block-start: 1rem;
     margin-block-end: 3rem;
 }
+
 .umap-autocomplete li.on {
     background-color: white;
 }
@@ -223,33 +255,40 @@ form:has(input[type="search"]) input[type="submit"] {
 h2.tabs a {
     text-decoration: none;
 }
+
 h2.tabs a[href$="/me/profile"] {
     display: none;
 }
+
 h2.tabs a:not(.selected) {
     background-image: unset;
 }
 
 /* Unsure why purgecss does not handle these styles. */
-@media (min-width:62em){
+@media (min-width:62em) {
     .fr-mx-lg-12w {
         margin-left: 6.2rem !important;
         margin-right: 6.2rem !important;
     }
 }
-@media (min-width:78em){
+
+@media (min-width:78em) {
     .fr-mx-xl-15w {
         margin-left: 7.8rem !important;
         margin-right: 7.8rem !important;
     }
 }
+
 #blog-article .fr-alert:has(+ p),
 #blog-article .fr-alert:has(+ h3) {
     margin-bottom: 2rem;
 }
+
 :target h2 {
-    background-color: #fceeac; /* green-tilleul-verveine-950 */
+    background-color: #fceeac;
+    /* green-tilleul-verveine-950 */
 }
+
 .fr-alert__title {
     margin-top: 0;
 }
@@ -257,13 +296,16 @@ h2.tabs a:not(.selected) {
 .umap-contextmenu {
     list-style: none;
 }
+
 .fr-select {
     border-radius: 0;
     border-left: 1px solid var(--border-action-high-blue-france);
 }
+
 .fr-tag {
     font-weight: normal;
 }
+
 p:has(.fr-tag) {
     line-height: 1.75;
     margin-bottom: 8px;
@@ -275,5 +317,5 @@ p:has(.fr-tag) {
 /* ****************************** */
 
 .fr-card__img img {
-  display: initial;
+    display: initial;
 }
