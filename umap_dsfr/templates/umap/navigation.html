@@ -53,9 +53,8 @@
               {% endif %}
               {% if user.is_authenticated %}
                 <li>
-                  <a class="fr-btn fr-icon-lock-fill"
-                     href="{% url "logout" %}"
-                     class="logout">Se déconnecter ({{ user }})</a>
+                  <a class="fr-btn fr-icon-lock-fill logout"
+                     href="{% url "logout" %}">Se déconnecter ({{ user }})</a>
                 </li>
               {% else %}
                 <li>
