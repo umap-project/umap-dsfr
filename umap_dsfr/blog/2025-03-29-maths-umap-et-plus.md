@@ -70,6 +70,6 @@ Dans un autre registre, Yannis Taillasson a également créé cette carte qui pe
 
 <div class="fr-alert fr-alert--info">
 
-Grand merci à Yannis Taillasson pour le partage d’expérience, le 27 mars 2025
+Grand merci à Yannis Taillasson pour le partage d’expérience, le 27 mars 2025.
 
 </div>

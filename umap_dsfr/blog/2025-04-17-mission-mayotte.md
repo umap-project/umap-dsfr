@@ -114,7 +114,7 @@ Nota : avec la fonctionnalité « temps réel », plusieurs équipes qui inte
 Il serait intéressant de **se doter d’un « kit » initialisé par un géomaticien, avec la gestion des droits clé en main, en lien avec Grist, Docs... tous les outils de [la suite numérique de l’État](https://lasuite.numerique.gouv.fr/). Il nous faudrait également un espace de stockage (drive).**
 Un moteur de recherche qui permette de naviguer dans les différents fonds de plan disponibles serait un plus, car ils sont nombreux et variés, entre les fonds OSM, IGN, photo aérienne IGN…
 
-*Yohan Boniface est créateur et développeur de uMap depuis son origine en 2013. L'outil étant totalement libre et ouvert, vous pouvez rejoindre la communauté des contributeurs.*
+*Yohan Boniface est créateur et développeur de uMap depuis son origine en 2013. L’outil étant totalement libre et ouvert, vous pouvez rejoindre la communauté des contributeurs.*
 
 <div class="fr-alert fr-alert--info">
 
