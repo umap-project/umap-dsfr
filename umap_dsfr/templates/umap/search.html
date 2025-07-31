@@ -1,5 +1,10 @@
 {% extends "umap/content.html" %}
 {% load umap_tags i18n static %}
+
+{% block head_title %}
+  {% translate "Explore maps" %} - {{ SITE_DESCRIPTION }}
+{% endblock head_title %}
+
 {% block content %}
   <main role="main" class="fr-container-fluid">
     <div id="exemples">
