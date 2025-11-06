@@ -10,6 +10,12 @@
                  placeholder="{{ label_title }}"
                  class="fr-input"
                  value="{{ request.GET.q|default:"" }}" />
+          <select class="fr-select" name="tags">
+            <option value="">Toutes les catégories</option>
+            {% for value, label in UMAP_TAGS %}
+            <option value="{{ value }}" {% if request.GET.tags == value %}selected{% endif %}>{{ label }}</option>
+            {% endfor %}
+          </select>
           <button class="fr-btn">Rechercher</button>
         </div>
       </form>
