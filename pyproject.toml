@@ -9,7 +9,6 @@ dependencies = [
     'umap-project',
     'mistune',
     'python-frontmatter',
-    'python-jose',
 ]
 
 [project.optional-dependencies]
